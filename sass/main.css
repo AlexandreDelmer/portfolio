@@ -1,1 +1,80 @@
-/*# sourceMappingURL=main.css.map */
+@font-face {
+  font-family: "Roboto Mono";
+  src: url(/style/font/robotoMono/RobotoMono-VariableFont_wght.ttf) format("truetype");
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: auto;
+  padding: 1.5rem;
+  background-color: #10e956;
+}
+nav ul {
+  display: flex;
+  margin: auto;
+  list-style: none;
+}
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+  font-weight: bold;
+}
+nav ul li span {
+  font-size: 0.8rem;
+  text-align: right;
+}
+
+.menu_toggle {
+  display: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.barOne {
+  margin: 0.1rem;
+  width: 3rem;
+  height: 0.4rem;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.barTwo {
+  margin: 0.1rem;
+  width: 2.6rem;
+  height: 0.4rem;
+  background-color: black;
+  border-radius: 10px;
+}
+
+.barThree {
+  margin: 0.1rem;
+  width: 2.2rem;
+  height: 0.4rem;
+  background-color: black;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .menu_toggle {
+    display: flex;
+  }
+  nav ul {
+    display: none;
+  }
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  background-color: #1e2128;
+  font-family: "Roboto Mono", sans-serif;
+  font-size: 18px;
+  line-height: 1;
+}
+
+main p {
+  color: white;
+}/*# sourceMappingURL=main.css.map */
