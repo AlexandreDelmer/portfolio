@@ -10,18 +10,20 @@ nav {
   padding: 1.5rem;
   background-color: #10e956;
 }
-nav ul {
+nav .menu {
   display: flex;
   margin: auto;
   list-style: none;
 }
-nav ul li {
+nav .menu a {
   display: flex;
   flex-direction: column;
   margin-left: 3rem;
   font-weight: bold;
+  text-decoration: none;
+  color: #1e2128;
 }
-nav ul li span {
+nav .menu a span {
   font-size: 0.8rem;
   text-align: right;
 }
@@ -31,44 +33,53 @@ nav ul li span {
   flex-direction: column;
   align-items: flex-end;
 }
-
-.barOne {
+.menu_toggle .barOne {
   margin: 0.1rem;
   width: 3rem;
   height: 0.4rem;
-  background-color: black;
+  background-color: #1e2128;
   border-radius: 10px;
 }
-
-.barTwo {
+.menu_toggle .barTwo {
   margin: 0.1rem;
   width: 2.6rem;
   height: 0.4rem;
-  background-color: black;
+  background-color: #1e2128;
   border-radius: 10px;
 }
-
-.barThree {
+.menu_toggle .barThree {
   margin: 0.1rem;
   width: 2.2rem;
   height: 0.4rem;
-  background-color: black;
+  background-color: #1e2128;
   border-radius: 10px;
+}
+.menu_toggle:hover .barOne {
+  transform: translateY(-0.3rem);
+}
+.menu_toggle:hover .barThree {
+  transform: translateY(0.3rem);
+}
+.menu_toggle .barOne, .menu_toggle .barThree {
+  transition: transform 0.3s ease;
 }
 
 @media screen and (max-width: 767px) {
   .menu_toggle {
     display: flex;
   }
-  nav ul {
+  nav .menu {
     display: none;
   }
 }
+body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   display: flex;
   flex-direction: column;
-  margin: 0;
-  padding: 0;
   background-color: #1e2128;
   font-family: "Roboto Mono", sans-serif;
   font-size: 18px;

@@ -6,16 +6,18 @@ nav{
     padding: 1.5rem;
     background-color: $primaryColor;
 
-    & ul{
+    & .menu{
         display: flex;
         margin: auto;
         list-style: none;
 
-        & li{
+        & a{
             display: flex;
             flex-direction: column;
             margin-left: 3rem;
             font-weight: bold;
+            text-decoration: none;
+            color: $secondaryColor;
 
             & span{
                 font-size: 0.8rem;
@@ -29,38 +31,51 @@ nav{
     display: none;
     flex-direction: column;
     align-items: flex-end;
+
+    & .barOne{
+        margin: 0.1rem;
+        width: 3rem;
+        height: 0.4rem;
+        background-color: #1e2128;
+        border-radius: 10px;
+    }
+    
+    & .barTwo{
+        margin: 0.1rem;
+        width: 2.6rem;
+        height: 0.4rem;
+        background-color: #1e2128;
+        border-radius: 10px;
+    }
+    
+    & .barThree{
+        margin: 0.1rem;
+        width: 2.2rem;
+        height: 0.4rem;
+        background-color: #1e2128;
+        border-radius: 10px;
+    }
+
+    &:hover .barOne{
+        transform: translateY(-0.3rem);
+    }
+
+    &:hover .barThree{
+        transform: translateY(0.3rem);
+    }
+
+    & .barOne, .barThree{
+        transition: transform 0.3s ease;
+    }
 }
 
-.barOne{
-    margin: 0.1rem;
-    width: 3rem;
-    height: 0.4rem;
-    background-color: black;
-    border-radius: 10px;
-}
-
-.barTwo{
-    margin: 0.1rem;
-    width: 2.6rem;
-    height: 0.4rem;
-    background-color: black;
-    border-radius: 10px;
-}
-
-.barThree{
-    margin: 0.1rem;
-    width: 2.2rem;
-    height: 0.4rem;
-    background-color: black;
-    border-radius: 10px;
-}
 
 @media screen and (max-width: 767px){
     .menu_toggle{
         display: flex;
     }
 
-    nav ul{
+    nav .menu{
         display: none;
     }
 }
