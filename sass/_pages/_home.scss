@@ -12,6 +12,18 @@ body{
     line-height: 1;
 }
 
-main p{
+h2, p{
     color: white;
+}
+
+.skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+
+    &_grid{
+        display: wrap;
+    }
 }
