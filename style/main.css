@@ -35,6 +35,7 @@ nav .menu a {
   font-weight: bold;
   text-decoration: none;
   color: #1e2128;
+  opacity: 0.5;
 }
 nav .menu a span {
   font-size: 0.8rem;
@@ -89,10 +90,6 @@ nav .menu a span {
 
 .effectOnOver {
   opacity: 0.5;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 @media screen and (max-width: 767px) {
