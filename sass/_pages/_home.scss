@@ -6,24 +6,7 @@ body, h1, h2, h3, p, ul, li {
 body{
     display: flex;
     flex-direction: column;
-    background-color: $secondaryColor;
-    font-family: "Roboto Mono", sans-serif;
-    font-size: $secondaryFontSize;
+    background-color: $fifthColor;
+    font-family: "Prompt", sans-serif;
     line-height: 1;
-}
-
-h2, p{
-    color: white;
-}
-
-.skills{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-top: 2rem;
-
-    &_grid{
-        display: wrap;
-    }
 }

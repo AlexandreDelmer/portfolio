@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Roboto Mono";
-  src: url(/style/font/robotoMono/RobotoMono-VariableFont_wght.ttf) format("truetype");
+  font-family: "Prompt";
+  src: url(/style/font/prompt/Prompt-Light.ttf) format("truetype");
 }
 nav {
   display: -webkit-box;
@@ -14,7 +14,6 @@ nav {
           justify-content: space-between;
   width: auto;
   padding: 1.5rem;
-  background-color: #10e956;
 }
 nav .menu {
   display: -webkit-box;
@@ -34,7 +33,7 @@ nav .menu a {
   margin-left: 3rem;
   font-weight: bold;
   text-decoration: none;
-  color: #1e2128;
+  color: white;
 }
 nav .menu a span {
   font-size: 0.8rem;
@@ -55,21 +54,21 @@ nav .menu a span {
   margin: 0.1rem;
   width: 3rem;
   height: 0.4rem;
-  background-color: #1e2128;
+  background-color: white;
   border-radius: 10px;
 }
 .menu_toggle .barTwo {
   margin: 0.1rem;
   width: 2.6rem;
   height: 0.4rem;
-  background-color: #1e2128;
+  background-color: white;
   border-radius: 10px;
 }
 .menu_toggle .barThree {
   margin: 0.1rem;
   width: 2.2rem;
   height: 0.4rem;
-  background-color: #1e2128;
+  background-color: white;
   border-radius: 10px;
 }
 .menu_toggle:hover .barOne {
@@ -95,7 +94,7 @@ nav .menu a span {
   transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1100px) {
   .menu_toggle {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -118,32 +117,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: #1e2128;
-  font-family: "Roboto Mono", sans-serif;
-  font-size: 18px;
+  background-color: #101630;
+  font-family: "Prompt", sans-serif;
   line-height: 1;
-}
-
-h2, p {
-  color: white;
-}
-
-.skills {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 2rem;
-}
-.skills_grid {
-  display: wrap;
 }/*# sourceMappingURL=main.css.map */
