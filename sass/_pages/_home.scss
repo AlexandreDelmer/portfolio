@@ -1,12 +1,77 @@
-body, h1, h2, h3, p, ul, li {
+:root {
+    font-size: 24px;
+}
+
+body{
     margin: 0;
-    padding: 0;
+    padding : 0rem 2rem 0rem 2rem;
+    font-size: $primaryFontSize;
 }
 
 body{
     display: flex;
     flex-direction: column;
     background-color: $fifthColor;
-    font-family: "Prompt", sans-serif;
+    font-family: "quantico", sans-serif;
     line-height: 1;
+}
+
+h1, h2, h3{
+    color: $primaryColor;
+}
+
+h1{
+    font-size: $sixthFontSize;
+}
+
+h2{
+    font-size: $fifthFontSize;
+}
+
+#logo{
+    width: 3rem;
+    height: auto;
+}
+
+.intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    line-height: 2.5rem;
+
+    &_p{
+        color: $secondaryColor;
+        font-size: $tertiaryFontSize;
+    }
+
+    & h1{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 0.3rem;
+    }
+    & button{
+        align-self: flex-start;
+    }
+}
+
+.aboutme{
+    display: flex;
+    position: relative;
+
+    &_img{
+        width: 15rem;
+        height: auto;
+        z-index: 1;
+    }
+
+    &_frame{
+        margin: 0.1rem;
+        width: 15rem;
+        height: auto;
+        border: 0.3rem solid $fourthColor;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 2;
+    }
 }

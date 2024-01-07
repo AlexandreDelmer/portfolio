@@ -1,35 +1,41 @@
 @font-face {
-  font-family: "Prompt";
-  src: url(/style/font/prompt/Prompt-Light.ttf) format("truetype");
+  font-family: "quantico";
+  src: url(/style/font/quantico/Quantico-Regular.otf) format("truetype");
 }
+@font-face {
+  font-family: "prompt";
+  src: url(/style/font/prompt/Prompt-Italic.ttf) format("truetype");
+}
+button {
+  color: white;
+  font-size: 1rem;
+  font-family: "quantico", sans-serif;
+  width: auto;
+  height: 100%;
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+}
+
+.btnOne {
+  background: linear-gradient(to right, #740CDC, #56ADD5);
+  border: none;
+  border-radius: 20px;
+}
+
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   width: auto;
   padding: 1.5rem;
 }
 nav .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin: auto;
   list-style: none;
 }
 nav .menu a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-left: 3rem;
   font-weight: bold;
   text-decoration: none;
@@ -42,13 +48,8 @@ nav .menu a span {
 
 .menu_toggle {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .menu_toggle .barOne {
   margin: 0.1rem;
@@ -72,52 +73,98 @@ nav .menu a span {
   border-radius: 10px;
 }
 .menu_toggle:hover .barOne {
-  -webkit-transform: translateY(-0.3rem);
-          transform: translateY(-0.3rem);
+  transform: translateY(-0.3rem);
 }
 .menu_toggle:hover .barThree {
-  -webkit-transform: translateY(0.3rem);
-          transform: translateY(0.3rem);
+  transform: translateY(0.3rem);
 }
 .menu_toggle .barOne, .menu_toggle .barThree {
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 
 .effectOnOver {
   opacity: 0.5;
-  -webkit-transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
-  transition: opacity 0.5s ease, -webkit-transform 0.5s ease;
   transition: opacity 0.5s ease, transform 0.5s ease;
-  transition: opacity 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
 }
 
 @media screen and (max-width: 1100px) {
   .menu_toggle {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   nav .menu {
     display: none;
   }
 }
-body, h1, h2, h3, p, ul, li {
-  margin: 0;
-  padding: 0;
+:root {
+  font-size: 24px;
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin: 0;
+  padding: 0rem 2rem 0rem 2rem;
+  font-size: 1rem;
+}
+
+body {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   background-color: #101630;
-  font-family: "Prompt", sans-serif;
+  font-family: "quantico", sans-serif;
   line-height: 1;
+}
+
+h1, h2, h3 {
+  color: white;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#logo {
+  width: 3rem;
+  height: auto;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  line-height: 2.5rem;
+}
+.intro_p {
+  color: #7D8296;
+  font-size: 1.5rem;
+}
+.intro h1 {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.3rem;
+}
+.intro button {
+  align-self: flex-start;
+}
+
+.aboutme {
+  display: flex;
+  position: relative;
+}
+.aboutme_img {
+  width: 15rem;
+  height: auto;
+  z-index: 1;
+}
+.aboutme_frame {
+  margin: 0.1rem;
+  width: 15rem;
+  height: auto;
+  border: 0.3rem solid #4F109C;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 2;
 }/*# sourceMappingURL=main.css.map */
