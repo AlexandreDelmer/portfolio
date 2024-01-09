@@ -152,20 +152,24 @@ h2 {
 
 .aboutme {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .aboutme_portait {
   display: flex;
   position: relative;
 }
 .aboutme_img {
-  max-width: 100%;
+  max-width: 15rem;
   height: auto;
+  position: relative;
+  padding: 3rem;
 }
 .aboutme_frame {
   margin: 0.1rem;
-  max-width: 100%;
-  height: auto;
-  border: 0.3rem solid #4F109C;
+  max-width: 15rem;
+  height: 15rem;
+  border: 0.7rem solid #4F109C;
   border-radius: 10px;
   position: absolute;
   z-index: 0;
