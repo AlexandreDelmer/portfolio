@@ -57,21 +57,24 @@ h2{
 
 .aboutme{
     display: flex;
-    position: relative;
+
+    &_portait{
+        display: flex;
+        position: relative;
+    }
 
     &_img{
-        width: 15rem;
+        max-width: 100%;
         height: auto;
-        z-index: 1;
     }
 
     &_frame{
         margin: 0.1rem;
-        width: 15rem;
+        max-width: 100%;
         height: auto;
         border: 0.3rem solid $fourthColor;
         border-radius: 10px;
         position: absolute;
-        z-index: 2;
+        z-index: 0;
     }
 }
