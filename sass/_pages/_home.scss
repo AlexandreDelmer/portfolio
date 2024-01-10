@@ -4,7 +4,7 @@
 
 body{
     margin: 0;
-    padding : 0rem 2rem 0rem 2rem;
+    padding : 0rem 4rem 0rem 5rem;
     font-size: $primaryFontSize;
 }
 
@@ -66,10 +66,9 @@ h2{
     }
 
     &_img{
-        max-width: 15rem;
-        height: auto;
+        max-width: 574px;
+        height: 685px;
         position: relative;
-        padding: 3rem;
     }
 
     &_frame{
@@ -80,5 +79,23 @@ h2{
         border-radius: 10px;
         position: absolute;
         z-index: 0;
+    }
+
+    &_description{
+        margin-left: 8rem;
+
+        &_intro{
+
+            & p{
+                display: flex;
+                flex-direction: column;
+                color: $secondaryColor;
+
+                & span{
+                    padding-top: 1rem;
+                }
+
+            }
+        }
     }
 }
