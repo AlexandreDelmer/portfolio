@@ -13,21 +13,26 @@ button {
   width: auto;
   height: 100%;
   padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  cursor: pointer;
 }
 
 .btnOne {
   background: linear-gradient(to right, #740CDC, #56ADD5);
   border: none;
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .btnTwo {
+  border: none;
+  background: linear-gradient(to right, #56ADD5, #740CDC);
+  border-radius: 15px;
+}
+
+.btnThree {
   background: none;
-  border: 3px solid;
-  -o-border-image: linear-gradient(to right, #740CDC, #56ADD5);
-     border-image: linear-gradient(to right, #740CDC, #56ADD5);
-  border-image-slice: 1;
-  border-radius: 20px;
+  font-size: 1.25rem;
+  border: none;
+  color: #7D8296;
 }
 
 nav {
@@ -166,21 +171,10 @@ h2 {
 }
 .aboutme_portait {
   display: flex;
-  position: relative;
 }
 .aboutme_img {
   max-width: 574px;
-  height: 685px;
-  position: relative;
-}
-.aboutme_frame {
-  margin: 0.1rem;
-  max-width: 15rem;
-  height: 15rem;
-  border: 0.7rem solid #4F109C;
-  border-radius: 10px;
-  position: absolute;
-  z-index: 0;
+  height: auto;
 }
 .aboutme_description {
   margin-left: 8rem;
@@ -192,4 +186,22 @@ h2 {
 }
 .aboutme_description_intro p span {
   padding-top: 1rem;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.portfolio img {
+  max-width: 574px;
+  height: auto;
+}
+.portfolio_project {
+  display: flex;
+  justify-content: center;
+}
+.portfolio_project_description {
+  width: 50%;
 }/*# sourceMappingURL=main.css.map */

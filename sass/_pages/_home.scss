@@ -62,23 +62,13 @@ h2{
 
     &_portait{
         display: flex;
-        position: relative;
+
     }
 
     &_img{
         max-width: 574px;
-        height: 685px;
-        position: relative;
-    }
+        height: auto;
 
-    &_frame{
-        margin: 0.1rem;
-        max-width: 15rem;
-        height: 15rem;
-        border: 0.7rem solid $fourthColor;
-        border-radius: 10px;
-        position: absolute;
-        z-index: 0;
     }
 
     &_description{
@@ -98,4 +88,26 @@ h2{
             }
         }
     }
+}
+
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    & img{
+        max-width: 574px;
+        height: auto;
+    }
+
+    &_project{
+        display: flex;
+        justify-content: center;
+
+        &_description{
+            width: 50%;
+        }
+    }
+
 }
