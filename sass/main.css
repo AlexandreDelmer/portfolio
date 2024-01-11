@@ -23,7 +23,11 @@ button {
 
 .btnTwo {
   background: none;
-  border: none;
+  border: 3px solid;
+  -o-border-image: linear-gradient(to right, #740CDC, #56ADD5);
+     border-image: linear-gradient(to right, #740CDC, #56ADD5);
+  border-image-slice: 1;
+  border-radius: 20px;
 }
 
 nav {
