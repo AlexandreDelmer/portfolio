@@ -3,21 +3,22 @@
 }
 
 body{
-    margin: 0;
-    padding : 0rem 4rem 0rem 5rem;
-    font-size: $primaryFontSize;
-}
-
-body{
     display: flex;
     flex-direction: column;
     background-color: $fifthColor;
     font-family: "quantico", sans-serif;
     line-height: 1;
+    margin: 0;
+    padding: 0rem 2rem 0rem 2rem;
+    font-size: $primaryFontSize;
 }
 
 h1, h2, h3{
     color: $primaryColor;
+}
+
+h4{
+    color: $tertiaryColor;
 }
 
 h1{
@@ -57,24 +58,27 @@ h2{
 
 .aboutme{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    margin-bottom: 2rem;
 
     &_portait{
         display: flex;
-
     }
 
     &_img{
-        max-width: 574px;
+        max-width: 100%;
         height: auto;
-
     }
 
     &_description{
-        margin-left: 8rem;
+        margin-left: 3rem;
 
         &_intro{
+
+            & h2{
+                margin: 0;
+            }
 
             & p{
                 display: flex;
@@ -99,15 +103,108 @@ h2{
     & img{
         max-width: 574px;
         height: auto;
+        margin-left: 1rem;
+    }
+
+    &_menu{
+        margin-bottom: 2rem;
     }
 
     &_project{
         display: flex;
-        justify-content: center;
+        justify-content: space-evenly;
+        padding: 2rem;
 
         &_description{
             width: 50%;
+            color: $primaryColor;
+
+            &_p{
+                color: $secondaryColor;
+            }
+
+            &_number{
+                color: $tertiaryColor;
+            }
+
+            &_link{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &_arrow{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    $border: 10px;
+                    
+                    &_stick{
+                        border: 2px solid $primaryColor;
+                        width: 40px;
+                        height: 0;
+                    }
+
+                    &_end{
+                        display: flex;
+                        align-items: center;
+                        margin-right: 1rem;
+                        height: 0;
+                        width: 0;
+                        border-top: $border solid transparent; /* Hauteur de la flèche */
+                        border-bottom: $border solid transparent;
+                        border-left: $border solid $primaryColor; /* Couleur de la flèche */
+                    }
+                }
+            }
+        }
+
+        &_img{
+            height: 100%;
+
+            & img{
+                width: auto;
+                max-height: 500px ;
+            }
         }
     }
 
+    & button{
+        margin-bottom: 2rem;
+    }
+}
+
+.formations{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &_list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 75%;
+
+        &_frame{
+            border: 2px solid red;
+            padding: 1rem;
+
+            &_header{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                & img{
+                    width: auto;
+                    max-height: 80px;
+                    margin-right: 1rem;
+                }
+
+                &_title{
+                    font-weight: bold;
+                }
+            }
+        }
+
+    }
 }
