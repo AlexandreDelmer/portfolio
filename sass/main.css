@@ -41,7 +41,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   width: auto;
-  padding: 1.5rem;
+  padding: 1rem;
 }
 nav .menu {
   display: flex;
@@ -102,7 +102,7 @@ nav .menu a span {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1480px) {
   .menu_toggle {
     display: flex;
   }
@@ -142,7 +142,7 @@ h2 {
 }
 
 #logo {
-  width: 3rem;
+  max-width: 75px;
   height: auto;
 }
 
@@ -166,6 +166,19 @@ h2 {
   align-self: flex-start;
 }
 
+@media screen and (max-width: 1100px) {
+  .intro {
+    align-items: center;
+  }
+  .intro h1 {
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  .intro button {
+    align-self: center;
+  }
+}
 .aboutme {
   display: flex;
   justify-content: space-evenly;
@@ -176,7 +189,7 @@ h2 {
   display: flex;
 }
 .aboutme_img {
-  max-width: 100%;
+  max-width: 500px;
   height: auto;
 }
 .aboutme_description {
@@ -194,6 +207,32 @@ h2 {
   padding-top: 1rem;
 }
 
+@media screen and (max-width: 1100px) {
+  .aboutme {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutme_portrait {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutme_description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-left: 0;
+  }
+  .aboutme_description_intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
 .portfolio {
   display: flex;
   flex-direction: column;
