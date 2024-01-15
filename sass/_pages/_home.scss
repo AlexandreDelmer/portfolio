@@ -8,7 +8,7 @@ body{
     background-color: $fifthColor;
     font-family: "quantico", sans-serif;
     line-height: 1;
-    margin: 0;
+    margin: auto;
     padding: 0rem 2rem 0rem 2rem;
     font-size: $primaryFontSize;
 }
@@ -154,13 +154,13 @@ h2{
     }
 
     &_menu{
-        margin-bottom: 2rem;
+        margin-bottom: 0;
     }
 
     &_project{
         display: flex;
         justify-content: space-evenly;
-        padding: 2rem;
+        margin-bottom: 2rem;
 
         &_description{
             width: 50%;
@@ -220,18 +220,40 @@ h2{
     }
 }
 
+@media screen and (max-width: 1100px){
+    .portfolio_project{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+
+        &_description{
+            margin-bottom: 1rem;
+
+            &_link{
+                justify-content: center;
+            }
+        }
+    }
+}
+
 .formations{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 3rem;
+
+    & h2{
+        margin-bottom: 3rem;
+    }
 
     &_list{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         max-width: 75%;
-        gap: 25px;
+        gap: 3rem;
 
         &_background{
             background: $fifthColor;
@@ -239,7 +261,7 @@ h2{
             margin: 0.5rem;
             padding: 1rem;
             width: 400px;
-            height: 400px;
+            height: 300px;
 
         }
 
@@ -263,7 +285,78 @@ h2{
                     font-weight: bold;
                 }
             }
+
+            &_skills{
+
+                &_catalogue{
+                    display: flex;
+                    align-items: center;
+                    margin: auto;
+                    max-width: auto;
+
+                    position: relative;
+                    z-index: 2;
+                    padding: 1rem;
+                    box-sizing: border-box;
+
+                    $border: 20px;
+                    color: #FFF;
+                    background: $fifthColor;
+                    background-clip: padding-box; /* !importanté */
+                    border: solid $border transparent; /* !importanté */
+                    border-radius: 1em;
+
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        top: 0; right: 0; bottom: 0; left: 0;
+                        z-index: -1;
+                        margin: -$border; /* !importanté */
+                        border-radius: inherit; /* !importanté */
+                        background: linear-gradient(to right, #56ADD5, #740CDC );
+                    }
+                }
+            }
         }
 
+    }
+}
+
+.technologies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    &_div{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+
+        &_list{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 0rem 5rem 2rem 5rem;
+
+            & img{
+                max-width: 200px;
+                max-height: auto;
+            }
+
+            & p{
+                color: $secondaryColor;
+                font-size: $tertiaryFontSize;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .technologies{
     }
 }
