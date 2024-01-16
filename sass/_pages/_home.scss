@@ -381,7 +381,6 @@ h2{
             padding: 0rem 1rem 0rem 1rem;
             margin-bottom: 1rem;
             gap: 60px;
-            max-width: 800px;
         }
 
         &_description{
@@ -393,22 +392,56 @@ h2{
             border-radius: 15px;
             padding: 1rem;
             margin-bottom: 2rem;
-            max-width: 800px;
+
+            &_text{
+                margin-bottom: 1rem;
+
+            }
 
             &_contact{
                 display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 70px;
+
+                &_adress{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+                    color: $eightColor;
+                }
+
+                &_email{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    gap: 10px;
+
+                    & a{
+                        text-decoration: none;
+                        color: $eightColor;
+                    }
+                }
+
+                & img{
+                    max-width: 20px;
+                    height: 100%;
+                }
             }
 
             &_skills{
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: flex-start;
+                align-items: center;
 
                 & p{
                     background: $sixthColor;
                     padding: 0.5rem;
-                    margin: 0rem 0.5rem 0rem 0.5rem;
                     border-radius: 15px;
+                    margin: 0rem 1rem 0.5rem 0rem;
+                    text-align: center;
                 }
             }
         }
