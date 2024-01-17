@@ -9,7 +9,6 @@ body{
     font-family: "quantico", sans-serif;
     line-height: 1;
     margin: auto;
-    padding: 0rem 2rem 0rem 2rem;
     font-size: $primaryFontSize;
 }
 
@@ -29,7 +28,7 @@ h2{
     font-size: $fifthFontSize;
 }
 
-#logo{
+.logo{
     max-width: 75px;
     height: auto;
 }
@@ -40,6 +39,7 @@ h2{
     justify-content: center;
     align-items: left;
     line-height: 2.5rem;
+    padding: 0rem 2rem 0rem 2rem;
 
     &_p{
         color: $secondaryColor;
@@ -78,6 +78,7 @@ h2{
     justify-content: space-evenly;
     align-items: center;
     margin-bottom: 2rem;
+    padding: 0rem 2rem 0rem 2rem;
 
     &_portait{
         display: flex;
@@ -146,6 +147,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0rem 2rem 0rem 2rem;
 
     & img{
         max-width: 574px;
@@ -243,6 +245,7 @@ h2{
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
+    padding: 0rem 2rem 0rem 2rem;
 
     & h2{
         margin-bottom: 3rem;
@@ -326,6 +329,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0rem 2rem 0rem 2rem;
     
     &_div{
         display: flex;
@@ -365,6 +369,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 0rem 2rem 0rem 2rem;
 
     &_list{
         display: flex;
@@ -381,6 +386,8 @@ h2{
             padding: 0rem 1rem 0rem 1rem;
             margin-bottom: 1rem;
             gap: 60px;
+            width: 75%;
+            height: auto;
         }
 
         &_description{
@@ -392,6 +399,8 @@ h2{
             border-radius: 15px;
             padding: 1rem;
             margin-bottom: 2rem;
+            width: 75%;
+            height: auto;
 
             &_text{
                 margin-bottom: 1rem;
@@ -445,5 +454,83 @@ h2{
                 }
             }
         }
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 150px 150px 0px 0px;
+    margin-top: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom right, #740CDC, #56ADD5);
+    padding: 0rem 2rem 1rem 2rem;
+
+    &_contact{
+        display: flex;
+
+        &_informations{
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            height: auto;
+
+            &_description{
+                color: $ninethColor;
+            }
+
+            &_data{
+                color: $primaryColor;
+            }
+        }
+
+        &_form{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: auto;
+            margin: 0rem 2rem 0rem 2rem;
+
+            & input{
+                background: $fifthColor;
+                border: none;
+            }
+
+            & textarea{
+                background: $fifthColor;
+                border: none;
+            }
+        }
+    }
+
+    &_line{
+        border: 1px solid $primaryColor;
+        width: 100%;
+        height: auto;
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    &_mentions{
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-around;
+        align-items: center;
+        color: $primaryColor;
+        font-size: 20px;
+
+        &_socialMedia{
+            display: flex;
+
+            & img{
+                width: 60px;
+                height: auto;
+                margin: 0rem 0.5rem 0rem 0.5rem;
+            }
+        }
+        
     }
 }

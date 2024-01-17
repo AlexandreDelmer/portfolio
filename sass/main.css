@@ -42,7 +42,7 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: auto;
-  padding: 1rem;
+  padding: 1rem 2rem 0rem 2rem;
 }
 nav .menu {
   display: -webkit-box;
@@ -149,7 +149,6 @@ body {
   font-family: "quantico", sans-serif;
   line-height: 1;
   margin: auto;
-  padding: 0rem 2rem 0rem 2rem;
   font-size: 1rem;
 }
 
@@ -169,7 +168,7 @@ h2 {
   font-size: 2rem;
 }
 
-#logo {
+.logo {
   max-width: 75px;
   height: auto;
 }
@@ -189,6 +188,7 @@ h2 {
       -ms-flex-align: left;
           align-items: left;
   line-height: 2.5rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 .intro_p {
   color: #7D8296;
@@ -240,6 +240,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 2rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 .aboutme_portait {
   display: -webkit-box;
@@ -339,6 +340,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0rem 2rem 0rem 2rem;
 }
 .portfolio img {
   max-width: 574px;
@@ -459,6 +461,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 3rem;
+  padding: 0rem 2rem 0rem 2rem;
 }
 .formations h2 {
   margin-bottom: 3rem;
@@ -557,6 +560,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0rem 2rem 0rem 2rem;
 }
 .technologies_div {
   display: -webkit-box;
@@ -612,6 +616,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0rem 2rem 0rem 2rem;
 }
 .xp_list {
   display: -webkit-box;
@@ -642,6 +647,8 @@ h2 {
   padding: 0rem 1rem 0rem 1rem;
   margin-bottom: 1rem;
   gap: 60px;
+  width: 75%;
+  height: auto;
 }
 .xp_list_description {
   display: -webkit-box;
@@ -661,6 +668,8 @@ h2 {
   border-radius: 15px;
   padding: 1rem;
   margin-bottom: 2rem;
+  width: 75%;
+  height: auto;
 }
 .xp_list_description_text {
   margin-bottom: 1rem;
@@ -729,4 +738,100 @@ h2 {
   border-radius: 15px;
   margin: 0rem 1rem 0.5rem 0rem;
   text-align: center;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 150px 150px 0px 0px;
+  margin-top: 2rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: -webkit-gradient(linear, left top, right bottom, from(#740CDC), to(#56ADD5));
+  background: linear-gradient(to bottom right, #740CDC, #56ADD5);
+  padding: 0rem 2rem 1rem 2rem;
+}
+.footer_contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer_contact_informations {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  height: auto;
+}
+.footer_contact_informations_description {
+  color: #A5A6FF;
+}
+.footer_contact_informations_data {
+  color: white;
+}
+.footer_contact_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 50%;
+  height: auto;
+  margin: 0rem 2rem 0rem 2rem;
+}
+.footer_contact_form input {
+  background: #101630;
+  border: none;
+}
+.footer_contact_form textarea {
+  background: #101630;
+  border: none;
+}
+.footer_line {
+  border: 1px solid white;
+  width: 100%;
+  height: auto;
+  margin: 1rem 0rem 1rem 0rem;
+}
+.footer_mentions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: 20px;
+}
+.footer_mentions_socialMedia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.footer_mentions_socialMedia img {
+  width: 60px;
+  height: auto;
+  margin: 0rem 0.5rem 0rem 0.5rem;
 }/*# sourceMappingURL=main.css.map */
