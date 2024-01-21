@@ -380,6 +380,7 @@ h2{
 
         &_title{
             display: flex;
+            justify-content: space-between;
             align-items: center;
             background: linear-gradient(to right, #56ADD5, #740CDC);
             border-radius: 15px;
@@ -462,7 +463,7 @@ h2{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-radius: 150px 150px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
     margin-top: 2rem;
     width: 100%;
     box-sizing: border-box;
@@ -471,37 +472,71 @@ h2{
 
     &_contact{
         display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1rem;
 
         &_informations{
             display: flex;
             flex-direction: column;
-            width: 60%;
-            height: auto;
 
             &_description{
                 color: $ninethColor;
+                margin-bottom: 1rem;
+                max-width: 50%;
             }
 
             &_data{
+                display: flex;
+                align-items: center;
                 color: $primaryColor;
+
+                & img{
+                    max-width: 50px;
+                    height: auto;
+                    margin-right: 1rem;
+                }
             }
         }
 
         &_form{
             display: flex;
             flex-direction: column;
-            width: 50%;
-            height: auto;
-            margin: 0rem 2rem 0rem 2rem;
+            padding: 1rem;
+            width: 25rem;
+            border-radius: 15px;
+            background: linear-gradient(to top left, #740CDC, #56ADD5);
+
 
             & input{
                 background: $fifthColor;
+                font-size: 15px;
                 border: none;
+                margin-bottom: 0.5rem;
+                border-radius: 15px;
+                padding: 0.5rem;
+                color: $primaryColor;
+
+                & ::placeholder{
+                    font-size: $primaryFontSize;
+                    font-weight: bold;
+                }
             }
 
             & textarea{
                 background: $fifthColor;
                 border: none;
+                padding: 0.5rem;
+                margin-bottom: 0.5rem;
+                border-radius: 15px;
+                color: $primaryColor;
+                resize: none;
+            }
+
+            &_sender{
+                color: $primaryColor;
+                font-weight: bold;
+                max-width: 100px;
             }
         }
     }
