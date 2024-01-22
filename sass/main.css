@@ -280,11 +280,21 @@ h2 {
   padding: 0rem 2rem 0rem 2rem;
 }
 .aboutme_portait {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  position: relative;
+  display: inline-block;
+}
+.aboutme_portait::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: red;
+  top: 10px;
+  right: 10px;
+  bottom: 10px;
+  left: 20px;
 }
 .aboutme_img {
+  display: block;
   max-width: 500px;
   height: auto;
 }

@@ -81,10 +81,23 @@ h2{
     padding: 0rem 2rem 0rem 2rem;
 
     &_portait{
-        display: flex;
+        position: relative;
+        display: inline-block;
+
+        &::before{
+            content:"";
+            display: block;
+            position: absolute;
+            background: red;
+            top: 10px;
+            right: 10px;
+            bottom: 10px;
+            left: 20px;
+        }
     }
 
-    &_img{
+    &_img{ 
+        display: block;
         max-width: 500px;
         height: auto;
     }
