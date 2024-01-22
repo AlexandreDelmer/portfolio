@@ -15,6 +15,35 @@ button{
 }
 
 .btnTwo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $fifthColor;
+    color: $primaryColor;
+    font-weight: bold;
+    $border: 20px;
+    border-radius: 15px;
+    position: relative;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    padding: 5px;
+    text-decoration: none;
+    outline: none;
+    border: 1px solid transparent;
+
+    &::before{
+        content:"";
+        display: block;
+        background: linear-gradient(to top left, #740CDC, #56ADD5);
+        position: absolute;
+        z-index: -1;
+        width: calc(100% + 5px);
+        height: calc(100% + 5px);
+        padding: 5px;
+        border-radius: $border;
+        margin: -1px;
+    }
 }
 
 .btnThree{
