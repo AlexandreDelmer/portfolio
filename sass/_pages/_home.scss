@@ -39,37 +39,35 @@ h2{
     justify-content: center;
     align-items: left;
     line-height: 2.5rem;
-    padding: 0rem 2rem 0rem 2rem;
+    padding: 2rem 2rem 2rem 2rem;
+    position: relative;
+    margin-bottom: 2rem;
 
     &_p{
         color: $secondaryColor;
         font-size: $tertiaryFontSize;
     }
 
+    &_background{
+        position: absolute;
+        z-index: -1;
+        transform: rotate(15deg);
+        font-size: 180px;
+        color: white;
+        opacity: 0.02;
+        top: 100px;
+        right: 0;
+        bottom: 0;
+        left: 120px;
+    }
+
     & h1{
         display: flex;
         flex-direction: column;
-        margin-bottom: 0.3rem;
+        margin-bottom: 1rem;
     }
     & button{
         align-self: flex-start;
-    }
-}
-
-@media screen and (max-width: 1100px){
-    .intro{
-        align-items: center;
-
-        & h1{
-            justify-content: center;
-            align-items: center;
-            margin-bottom: 1rem;
-
-        }
-
-        & button{
-            align-self: center;
-        }
     }
 }
 
@@ -80,26 +78,33 @@ h2{
     margin-bottom: 2rem;
     padding: 0rem 2rem 0rem 2rem;
 
-    &_portait{
+    &_portrait{
+        display: flex;
         position: relative;
-        display: inline-block;
-
-        &::before{
-            content:"";
-            display: block;
-            position: absolute;
-            background: red;
-            top: 10px;
-            right: 10px;
-            bottom: 10px;
-            left: 20px;
-        }
-    }
-
-    &_img{ 
-        display: block;
-        max-width: 500px;
+        max-width: 100%;
         height: auto;
+        margin-bottom: 2rem;
+
+        &_img{ 
+            max-width: 500px;
+            height: auto;
+            position: relative;
+            z-index: 0;
+            margin-right: 2rem;
+        }
+
+        &_frame{
+            position: absolute;
+            z-index: -1;
+            width: 450px;
+            height: 500px;
+            border: 10px solid $seventhColor;
+            border-radius: 10px;
+            top: 25px;
+            right: 0;
+            bottom: 0;
+            left: 75px;
+        }
     }
 
     &_description{
@@ -127,40 +132,9 @@ h2{
             display: flex;
             justify-content: flex-start;
             align-items: center;
-
             
             & button{
                 margin-right: 1rem;
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 1100px){
-    .aboutme{
-        flex-direction: column;
-        align-items: center;
-
-        &_portrait{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        &_description{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 2rem;
-            margin-left: 0;
-
-            &_intro{
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
             }
         }
     }
@@ -173,12 +147,6 @@ h2{
     align-items: center;
     padding: 0rem 2rem 0rem 2rem;
 
-    & img{
-        max-width: 574px;
-        height: auto;
-        margin-left: 1rem;
-    }
-
     &_menu{
         margin-bottom: 0;
     }
@@ -186,7 +154,34 @@ h2{
     &_project{
         display: flex;
         justify-content: space-evenly;
-        margin-bottom: 2rem;
+        margin-bottom: 3rem;
+
+        &_img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            margin-left: 2rem;
+
+            & img{
+                position: relative;
+                max-width: 600px;
+                height: auto;
+            }
+
+            & div{
+                position: absolute;
+                z-index: -1;
+                width: 500px;
+                height: 500px;
+                border: 10px solid $seventhColor;
+                border-radius: 10px;
+                top: 20px;
+                right: 0;
+                bottom: 0;
+                left: -40px;
+            }
+        }
 
         &_description{
             width: 50%;
@@ -246,23 +241,6 @@ h2{
     }
 }
 
-@media screen and (max-width: 1100px){
-    .portfolio_project{
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-
-        &_description{
-            margin-bottom: 1rem;
-
-            &_link{
-                justify-content: center;
-            }
-        }
-    }
-}
-
 .formations{
     display: flex;
     flex-direction: column;
@@ -282,18 +260,7 @@ h2{
         max-width: 75%;
         gap: 3rem;
 
-        &_background{
-            background: $fifthColor;
-            border-radius: 10px;
-            margin: 0.5rem;
-            padding: 1rem;
-            width: 400px;
-            height: 300px;
-
-        }
-
         &_frame{
-            background: linear-gradient(to right, #56ADD5, #740CDC );
             border-radius: 15px;
 
             &_header{
@@ -613,32 +580,5 @@ h2{
             }
         }
         
-    }
-}
-
-@media screen and (max-width: 1000px){
-    .footer{
-        border-radius: 0;
-        margin: 0;
-
-        &_contact{
-            flex-direction: column;
-
-            &_informations{
-                align-items: center;
-                margin: 0;
-
-                &_description{
-                    text-align: center;
-                    margin: 0rem 0rem 1rem 0rem;
-                }
-            }
-            
-            &_form{
-                margin-top: 1rem;
-                width: 60%;
-            }
-
-        }
     }
 }
