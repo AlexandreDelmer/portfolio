@@ -7,6 +7,41 @@
   font-family: "prompt";
   src: url(/style/font/prompt/Prompt-Italic.ttf) format("truetype");
 }
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.toggle-element {
+  display: none;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
 button {
   color: white;
   font-size: 1rem;
@@ -170,6 +205,46 @@ nav .menu a span {
     display: none;
   }
 }
+.nav_mobile {
+  width: 100%;
+  height: 100%;
+  background: #0F162A;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: fixed;
+  z-index: 1;
+}
+.nav_mobile_animation {
+  font-size: 90px;
+  color: white;
+  font-weight: bold;
+  width: 100%;
+  -webkit-animation: scroll 7s linear infinite;
+          animation: scroll 7s linear infinite;
+  white-space: nowrap;
+  margin: 0rem -5rem 0rem -5rem;
+}
+.nav_mobile_animation span {
+  color: #0F162A;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+  letter-spacing: 10px;
+}
+.nav_mobile p {
+  font-size: 2.5rem;
+  color: white;
+  font-weight: bold;
+  margin: 2rem;
+  padding: 0rem 1rem 0rem 1rem;
+}
+.nav_mobile p:hover {
+  background: white;
+  color: #0F162A;
+}
+
 :root {
   font-size: 24px;
 }
@@ -430,6 +505,7 @@ h2 {
 }
 .portfolio_project_description_link_arrow_stick {
   border: 2px solid white;
+  border-radius: 10px;
   width: 40px;
   height: 0;
 }
@@ -487,7 +563,6 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  max-width: 75%;
   gap: 3rem;
 }
 .formations_list_frame {
@@ -514,40 +589,6 @@ h2 {
 .formations_list_frame_header_title {
   font-weight: bold;
 }
-.formations_list_frame_skills_catalogue {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto;
-  max-width: auto;
-  position: relative;
-  z-index: 2;
-  padding: 1rem;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #FFF;
-  background: #0F162A;
-  background-clip: padding-box; /* !importanté */
-  border: solid 20px transparent; /* !importanté */
-  border-radius: 1em;
-}
-.formations_list_frame_skills_catalogue::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: -1;
-  margin: -20px; /* !importanté */
-  border-radius: inherit; /* !importanté */
-  background: -webkit-gradient(linear, left top, right top, from(#56ADD5), to(#740CDC));
-  background: linear-gradient(to right, #56ADD5, #740CDC);
-}
-
 .technologies {
   display: -webkit-box;
   display: -ms-flexbox;

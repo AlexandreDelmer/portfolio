@@ -208,6 +208,7 @@ h2{
                     
                     &_stick{
                         border: 2px solid $primaryColor;
+                        border-radius: 10px;
                         width: 40px;
                         height: 0;
                     }
@@ -257,7 +258,6 @@ h2{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        max-width: 75%;
         gap: 3rem;
 
         &_frame{
@@ -282,34 +282,6 @@ h2{
 
             &_skills{
 
-                &_catalogue{
-                    display: flex;
-                    align-items: center;
-                    margin: auto;
-                    max-width: auto;
-
-                    position: relative;
-                    z-index: 2;
-                    padding: 1rem;
-                    box-sizing: border-box;
-
-                    $border: 20px;
-                    color: #FFF;
-                    background: $fifthColor;
-                    background-clip: padding-box; /* !importanté */
-                    border: solid $border transparent; /* !importanté */
-                    border-radius: 1em;
-
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        top: 0; right: 0; bottom: 0; left: 0;
-                        z-index: -1;
-                        margin: -$border; /* !importanté */
-                        border-radius: inherit; /* !importanté */
-                        background: linear-gradient(to right, #56ADD5, #740CDC);
-                    }
-                }
             }
         }
     }

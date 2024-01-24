@@ -83,3 +83,44 @@ nav{
         display: none;
     }
 }
+
+.nav_mobile{
+    width: 100%;
+    height: 100%;
+    background: $fifthColor;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1;
+
+    &_animation{
+        font-size: 90px;
+        color: $primaryColor;
+        font-weight: bold;
+        width: 100%;
+        animation: scroll 7s linear infinite;
+        white-space: nowrap;
+        margin: 0rem -5rem 0rem -5rem;
+        
+        & span{
+            color: $fifthColor;
+            text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+            letter-spacing: 10px;
+        }
+    }
+
+    & p{
+        font-size: $sixthFontSize;
+        color: $primaryColor;
+        font-weight: bold;
+        margin: 2rem;
+        padding: 0rem 1rem 0rem 1rem;
+
+
+        &:hover{
+            background: $primaryColor;
+            color: $fifthColor;
+
+        }
+    }
+}
