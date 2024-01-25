@@ -50,4 +50,14 @@ button{
     font-size: $secondaryFontSize;
     border: none;
     color: $secondaryColor;
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center right;
+}
+
+.btnRotateBottom{
+    transform: rotate(-5deg);
+
+    &:hover{
+        transform: rotate(10deg);
+    }
 }

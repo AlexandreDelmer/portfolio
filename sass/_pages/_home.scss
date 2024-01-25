@@ -339,11 +339,10 @@ h2{
                             position: absolute;
                             z-index: -1;
                             background: linear-gradient(to right, #56ADD5,#740CDC);
-                            width: calc(100% + 10px);
-                            height: calc(100% + 10px);
+                            width: calc(100%);
+                            height: calc(100%);
                             padding: 10px;
                             border-radius: 15px;
-                            margin: -14px;
                             top: 0;
                             right: 0;
                             bottom: 0;

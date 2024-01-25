@@ -35,7 +35,7 @@ menuToggle.addEventListener('click', ()=>{
     body.classList.toggle("overflow-hidden")
 })
 
-let navMobileMenu = document.querySelectorAll('.nav_mobile_menu p')
+let navMobileMenu = document.querySelectorAll('.nav_mobile_menu a')
 console.log(navMobileMenu)
 
 for(let i = 0; i < navMobileMenu.length; i++){
