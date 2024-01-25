@@ -11,38 +11,21 @@ button{
 .btnOne{
     background: linear-gradient(to right, #740CDC, #56ADD5);
     border: none;
-    border-radius: 15px;
+    border-radius: 15px;    
 }
 
 .btnTwo{
     display: flex;
-    align-items: center;
     justify-content: center;
-    background: $fifthColor;
-    color: $primaryColor;
-    font-weight: bold;
-    $border: 20px;
-    border-radius: 15px;
-    position: relative;
-    width: 70px;
-    height: 40px;
-    text-align: center;
-    padding: 5px;
-    text-decoration: none;
+    align-items: center;
+    margin-left: 1rem;
+    background: linear-gradient(to top, #740CDC, #56ADD5);
     outline: none;
     border: 1px solid transparent;
-
-    &::before{
-        content:"";
-        background: linear-gradient(to top left, #740CDC, #56ADD5);
-        position: absolute;
-        z-index: -1;
-        width: calc(100% + 5px);
-        height: calc(100% + 5px);
-        padding: 5px;
-        border-radius: $border;
-        margin: -1px;
-    }
+    border-radius: 30px;
+    padding: 1rem;
+    max-width: 60px;
+    max-height: 60px;
 }
 
 .btnThree{
@@ -50,14 +33,37 @@ button{
     font-size: $secondaryFontSize;
     border: none;
     color: $secondaryColor;
-    transition: transform 0.3s ease-in-out;
-    transform-origin: center right;
 }
 
 .btnRotateBottom{
     transform: rotate(-5deg);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
 
     &:hover{
         transform: rotate(10deg);
+        background: $primaryColor;
+    }
+}
+
+.btnRotateTop{
+    transform: rotate(5deg);
+    transition: transform 0.3s ease-in-out;
+    transform-origin: center;
+
+    &:hover{
+        transform: rotate(10deg);
+        background: $primaryColor;
+    }
+}
+
+.btnScale{
+    animation: scale 1s linear infinite;
+
+    &:hover{
+        color: $fifthColor;
+        font-weight: bold;
+        border: 3px solid $fifthColor;
+        background-color: $primaryColor;
     }
 }

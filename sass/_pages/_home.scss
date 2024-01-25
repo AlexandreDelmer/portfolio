@@ -43,11 +43,6 @@ h2{
     position: relative;
     margin-bottom: 2rem;
 
-    &_p{
-        color: $secondaryColor;
-        font-size: $tertiaryFontSize;
-    }
-
     &_background{
         position: absolute;
         z-index: -1;
@@ -68,6 +63,17 @@ h2{
     }
     & button{
         align-self: flex-start;
+
+        & a{
+            text-decoration: none;
+            color: $primaryColor;
+            font-size: $tertiaryFontSize;
+
+            &:hover{
+                color: $fifthColor;
+            }
+
+        }
     }
 }
 
@@ -135,6 +141,15 @@ h2{
             
             & button{
                 margin-right: 1rem;
+
+                & a{
+                    text-decoration: none;
+                    color: $primaryColor;
+
+                    &:hover{
+                        color: $fifthColor;
+                    }
+                }
             }
         }
     }
@@ -268,7 +283,7 @@ h2{
             justify-content: top;
             align-items: flex-start;
             max-width: 450px;
-            height: 300px;
+            height: 250px;
             background: $fifthColor;
             padding: 1rem;
             position: relative;
@@ -328,27 +343,12 @@ h2{
                         justify-content: center;
                         align-items: center;
                         position: relative;
-                        background: $fifthColor;
+                        background: linear-gradient(to bottom left, #56ADD5,#740CDC);
                         color: $primaryColor;
+                        border-radius: 15px;
                         list-style: none;
                         white-space: nowrap;
                         padding: 0.5rem;
-
-                        &::before{
-                            content:"";
-                            position: absolute;
-                            z-index: -1;
-                            background: linear-gradient(to right, #56ADD5,#740CDC);
-                            width: calc(100%);
-                            height: calc(100%);
-                            padding: 10px;
-                            border-radius: 15px;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-                        }
-
                     }
                 }
             }
@@ -408,6 +408,7 @@ h2{
         justify-content: center;
         align-items: center;
         color: $primaryColor;
+        max-width: 70%;
 
         &_title{
             display: flex;
@@ -418,12 +419,25 @@ h2{
             padding: 0rem 1rem 0rem 1rem;
             margin-bottom: 1rem;
             gap: 60px;
-            width: 75%;
+            width: 1000px;
             height: auto;
+
+            &_btn{
+                font-size: $fifthFontSize;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+                transition: transform 0.5s ease-in-out;
+
+                &:hover{
+                    color: $fifthColor;
+                    cursor: pointer;
+                    transform: scale(1.5);
+                }
+            }
         }
 
         &_description{
-            display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: flex-start;
@@ -431,7 +445,7 @@ h2{
             border-radius: 15px;
             padding: 1rem;
             margin-bottom: 2rem;
-            width: 75%;
+            width: 1000px;
             height: auto;
 
             &_text{

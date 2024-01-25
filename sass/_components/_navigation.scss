@@ -1,5 +1,5 @@
-#backtToTop{
-    display: block;
+#backToTop{
+    display: none;
     position: fixed;
     z-index: 99;
     background: $primaryColor;
@@ -29,6 +29,11 @@
     &:hover{
         transform: scale(1.4);
         background: grey;
+    }
+
+    .scrolled{
+        transform: rotate(45deg);
+
     }
 }
 

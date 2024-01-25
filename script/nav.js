@@ -36,7 +36,6 @@ menuToggle.addEventListener('click', ()=>{
 })
 
 let navMobileMenu = document.querySelectorAll('.nav_mobile_menu a')
-console.log(navMobileMenu)
 
 for(let i = 0; i < navMobileMenu.length; i++){
     navMobileMenu[i].addEventListener('click', ()=>{
@@ -47,3 +46,28 @@ for(let i = 0; i < navMobileMenu.length; i++){
         body.classList.toggle("overflow-hidden")
     })
 }
+
+//function pour écouter que le DOM soit bien chargé
+document.addEventListener("DOMContentLoaded", ()=> {
+    let backToTop = document.getElementById("backToTop")
+
+    //Function pour faire apparaître le btn back to top et activer ses effets
+    window.onscroll = function() {
+        scrollFunction()
+    }
+
+    //Function pour afficher le btn back to top quand je scroll vers le bas
+    function scrollFunction(){
+        if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+            backToTop.style.display = "block"
+        } else {
+            backToTop.style.display = "none"
+        }
+    }
+
+    //Function pour remonter le scoll à 0 au click sur le btn
+    backToTop.addEventListener("click", ()=>{
+        document.body.scrollTop = 0
+        document.documentElement.scrollTop = 0
+    })
+})

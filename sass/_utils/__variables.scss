@@ -35,3 +35,17 @@ $sixthFontSize: 2.5rem;
         transform: translateX(0);
     }
 }
+
+@keyframes scale {
+    0% {
+        transform: scale(100%);
+    }
+    50% {
+        transform: scale(140%);
+    }
+    100% {
+        transform: scale(100%);
+    }
+}
+
+
