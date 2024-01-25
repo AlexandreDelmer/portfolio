@@ -74,12 +74,76 @@ nav{
 }
 
 
-@media screen and (max-width: 1300px){
+@media screen and (max-width: 1450px){
     .menu_toggle{
         display: flex;
     }
 
     nav .menu{
         display: none;
+    }
+}
+
+.nav_mobile{
+    width: 100%;
+    height: 100%;
+    background: $fifthColor;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: fixed;
+    z-index: 1;
+
+    /*Trouver un moyen de supprimer les à-coups dans mon animation*/
+    &_animation{
+        display: flex;
+        font-size: 90px;
+        font-weight: bold;
+        width: 100%;
+        height: 50px;
+        margin-top: 0.5rem;
+        /*animation: scroll 7s linear infinite;
+        white-space: nowrap;
+        margin: 0;
+        padding: 0;*/
+        
+        &_text{
+            display: flex;
+            align-items: center;
+            color: $fifthColor;
+            font-size: 3rem;
+            text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+            
+            & img{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                max-width: 80px;
+                height: auto;
+                margin: 0rem 0.5rem 0rem 00.5rem;
+            }
+        }    
+    }
+    
+    &_menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5%;
+
+        & p{
+            font-size: 80px;
+            color: $primaryColor;
+            font-weight: bold;
+            margin: 1rem;
+            padding: 0rem 0.7rem 0rem 0.7rem;
+            width: fit-content;
+            border-radius: 15px;
+    
+            &:hover{
+                background: $primaryColor;
+                color: $fifthColor;
+    
+            }
+        }
     }
 }

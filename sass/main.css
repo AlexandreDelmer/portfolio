@@ -7,6 +7,26 @@
   font-family: "prompt";
   src: url(/style/font/prompt/Prompt-Italic.ttf) format("truetype");
 }
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.visible {
+  display: flex;
+}
+
+.toggle-element {
+  display: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 button {
   color: white;
   font-size: 1rem;
@@ -42,7 +62,6 @@ button {
 }
 .btnTwo::before {
   content: "";
-  display: block;
   background: linear-gradient(to top left, #740CDC, #56ADD5);
   position: absolute;
   z-index: -1;
@@ -126,7 +145,7 @@ nav .menu a span {
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 1450px) {
   .menu_toggle {
     display: flex;
   }
@@ -134,6 +153,64 @@ nav .menu a span {
     display: none;
   }
 }
+.nav_mobile {
+  width: 100%;
+  height: 100%;
+  background: #0F162A;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: fixed;
+  z-index: 1;
+  /*Trouver un moyen de supprimer les à-coups dans mon animation*/
+}
+.nav_mobile_animation {
+  display: flex;
+  font-size: 90px;
+  font-weight: bold;
+  width: 100%;
+  height: 50px;
+  margin-top: 0.5rem;
+  /*animation: scroll 7s linear infinite;
+  white-space: nowrap;
+  margin: 0;
+  padding: 0;*/
+}
+.nav_mobile_animation_text {
+  display: flex;
+  align-items: center;
+  color: #0F162A;
+  font-size: 3rem;
+  text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white, 1px 1px 0 white;
+}
+.nav_mobile_animation_text img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 80px;
+  height: auto;
+  margin: 0rem 0.5rem 0rem 0.5rem;
+}
+.nav_mobile_menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 5%;
+}
+.nav_mobile_menu p {
+  font-size: 80px;
+  color: white;
+  font-weight: bold;
+  margin: 1rem;
+  padding: 0rem 0.7rem 0rem 0.7rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 15px;
+}
+.nav_mobile_menu p:hover {
+  background: white;
+  color: #0F162A;
+}
+
 :root {
   font-size: 24px;
 }
@@ -321,6 +398,7 @@ h2 {
 }
 .portfolio_project_description_link_arrow_stick {
   border: 2px solid white;
+  border-radius: 10px;
   width: 40px;
   height: 0;
 }
@@ -360,30 +438,31 @@ h2 {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  max-width: 75%;
   gap: 3rem;
 }
 .formations_list_frame {
-  border-radius: 15px;
   display: flex;
+  border-radius: 10px;
+  border: 1px solid transparent;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
   align-items: flex-start;
-  width: 500px;
-  height: auto;
-  background: green;
+  max-width: 450px;
+  height: 300px;
+  background: #0F162A;
   padding: 1rem;
-  margin: 1rem;
   position: relative;
 }
 .formations_list_frame::before {
   content: "";
   position: absolute;
   z-index: -1;
-  background: linear-gradient(to right, #740CDC, #56ADD5);
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(to right, #56ADD5, #740CDC);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  padding: 10px;
   border-radius: 15px;
+  margin: -14px;
   top: 0;
   right: 0;
   bottom: 0;
@@ -403,20 +482,46 @@ h2 {
 .formations_list_frame_header_title {
   font-weight: bold;
 }
-.formations_list_frame_skills_catalogue {
+.formations_list_frame_header_title h3, .formations_list_frame_header_title h4 {
+  margin: 0;
+}
+.formations_list_frame_skills {
   display: flex;
+  justify-content: flex-start;
+}
+.formations_list_frame_skills ul {
+  display: flex;
+  justify-items: flex-start;
+  flex-wrap: wrap;
+  margin: 1rem 0rem 0rem 0rem;
+  padding: 0;
+  gap: 25px;
+}
+.formations_list_frame_skills ul li {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  margin: auto;
-  max-width: auto;
   position: relative;
-  z-index: 2;
-  padding: 1rem;
-  box-sizing: border-box;
-  color: #FFF;
   background: #0F162A;
-  background-clip: padding-box; /* !importanté */
-  border: solid 20px transparent; /* !importanté */
-  border-radius: 1em;
+  color: white;
+  list-style: none;
+  white-space: nowrap;
+  padding: 0.5rem;
+}
+.formations_list_frame_skills ul li::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: linear-gradient(to right, #56ADD5, #740CDC);
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  padding: 10px;
+  border-radius: 15px;
+  margin: -14px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .technologies {

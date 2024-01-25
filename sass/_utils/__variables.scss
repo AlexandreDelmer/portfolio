@@ -14,3 +14,24 @@ $tertiaryFontSize: 1.5rem;
 $fourthFontSize: 1.75rem;
 $fifthFontSize: 2rem;
 $sixthFontSize: 2.5rem;
+
+.overflow-hidden{
+    overflow: hidden;
+}
+
+.visible{
+    display: flex;
+}
+
+.toggle-element{
+    display: none;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}

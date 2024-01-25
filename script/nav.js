@@ -23,3 +23,27 @@ function displaySelectMenuList (){
 }
 
 displaySelectMenuList()
+
+// Affiche le menu lorsqu'on clic sur le menu mobile
+let menuToggle = document.querySelector('.menu_toggle')
+
+menuToggle.addEventListener('click', ()=>{
+    let navMobile = document.querySelector('.nav_mobile')
+    let body = document.body
+    
+    navMobile.classList.toggle("toggle-element")
+    body.classList.toggle("overflow-hidden")
+})
+
+let navMobileMenu = document.querySelectorAll('.nav_mobile_menu p')
+console.log(navMobileMenu)
+
+for(let i = 0; i < navMobileMenu.length; i++){
+    navMobileMenu[i].addEventListener('click', ()=>{
+        let navMobile = document.querySelector('.nav_mobile')
+        let body = document.body
+
+        navMobile.classList.toggle("toggle-element")
+        body.classList.toggle("overflow-hidden")
+    })
+}

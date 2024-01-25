@@ -34,7 +34,6 @@ button{
 
     &::before{
         content:"";
-        display: block;
         background: linear-gradient(to top left, #740CDC, #56ADD5);
         position: absolute;
         z-index: -1;
