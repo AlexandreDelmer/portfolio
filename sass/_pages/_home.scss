@@ -416,17 +416,20 @@ h2{
             background: linear-gradient(to right, #56ADD5, #740CDC);
             border-radius: 15px;
             padding: 0rem 1rem 0rem 1rem;
-            margin-bottom: 1rem;
             gap: 60px;
             width: 1000px;
             height: auto;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
             &_btn{
+                display: flex;
                 font-size: $fifthFontSize;
                 text-align: center;
                 margin: 0;
                 padding: 0;
                 transition: transform 0.5s ease-in-out;
+                background: none;
+                border: 1px solid transparent;
 
                 &:hover{
                     color: $fifthColor;
@@ -441,11 +444,13 @@ h2{
             justify-content: center;
             align-items: flex-start;
             background: $seventhColor;
-            border-radius: 15px;
+            border-radius: 0px 0px 15px 15px;
             padding: 1rem;
             margin-bottom: 2rem;
-            width: 1000px;
+            width: 95%;
             height: auto;
+            position: relative;
+            z-index: -1;
 
             &_text{
                 margin-bottom: 1rem;
