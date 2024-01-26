@@ -17,6 +17,11 @@
     
 </head>
 <body>
+
+    <button id="backToTop">
+        <div id="backToTop_arrow"></div>
+    </button>
+
     <div class="nav_mobile toggle-element">
         <!-- Trouver un moyen de supprimer les à-coups dans mon animation -->
         <div class="nav_mobile_animation">
@@ -24,12 +29,12 @@
         </div>
 
         <div class="nav_mobile_menu">
-            <p>HOME</p>
-            <p>PORTFOLIO</p>
-            <p>FORMATIONS</p>
-            <p>TECHNOLOGIES</p>
-            <p>EXPRIENCES</p>
-            <p>CONTACT</p>
+            <a href="#home">HOME</a>
+            <a href="#portfolio">PORTFOLIO</a>
+            <a href="#formations">FORMATIONS</a>
+            <a href="#technologies">TECHNOLOGIES</a>
+            <a href="#experiences">EXPERIENCES</a>
+            <a href="#contact">CONTACT</a>
         </div>
     </div>
     <!-- HEADER -->
@@ -37,7 +42,7 @@
                 
         <!-- Menu de navivation -->
         <nav>
-            <img class ="logo" src="/src/logoFreelance.png" alt="logo">
+            <img class="logo" id="home" src="/src/logoFreelance.png" alt="logo">
 
             <div class="menu_toggle">
                 <div class="barOne"></div>
@@ -46,12 +51,12 @@
             </div>
 
             <div class="menu">
-                <a href="/index.html"><span>01</span> // home</a>
-                <a href="/index.html"><span>02</span> // portfolio</a>
-                <a href="/index.html"><span>03</span> // formations</a>
-                <a href="/index.html"><span>04</span> // technologies</a>
-                <a href="/index.html"><span>04</span> // experiences</a>
-                <a href="/index.html"><span>06</span> // contact</a>
+                <a href="#home"><span>01</span> // home</a>
+                <a href="#portfolio"><span>02</span> // portfolio</a>
+                <a href="#formations"><span>03</span> // formations</a>
+                <a href="#technologies"><span>04</span> // technologies</a>
+                <a href="#experiences"><span>04</span> // experiences</a>
+                <a href="#contact"><span>06</span> // contact</a>
             </div>
         </nav>
     </header>
@@ -63,7 +68,7 @@
         <div class="intro">
             <h1><span class="intro_p">Je suis</span> ALEXANDRE DELMER <span>WEB DEVELOPPEUR</span> FRONT END</span></h1>
             
-            <button class="btnOne">Mes projets</button>
+            <button class="btnOne btnRotateBottom"><a href="#portfolio">Mes projets</a></button>
 
             <h2 class="intro_background">DEVELOPPEUR</h2>
 
@@ -73,7 +78,7 @@
         <div class="aboutme">
 
             <div class="aboutme_portrait">
-                <img class="aboutme_portrait_img" src="/src/portait-ioanova.jpg" alt="">
+                <img class="aboutme_portrait_img" src="/src/profilPhoto.jpg" alt="Photo de profil de Alexandre Delmer">
                 <div class="aboutme_portrait_frame"></div>
             </div>
 
@@ -84,15 +89,15 @@
                 </div>
                 
                 <div class="aboutme_description_areaBtn">
-                    <button class="btnOne">CONTACTEZ MOI</button>
-                    <button class="btnTwo">CV</button>
+                    <button class="btnOne btnRotateTop"><a href="#contact">CONTACTEZ MOI</a></button>
+                    <button class="btnTwo btnScale">CV</button>
                 </div>
             </div>
         </div>
 
                 
         <!-- Mon portfolio, à mettre en commentaire si je n'ai pas de projet à montrer -->
-        <div class="portfolio">
+        <div class="portfolio" id="portfolio">
             <h2>PORTFOLIO</h2>
 
             <div class="portfolio_menu">
@@ -131,7 +136,7 @@
         </div>
 
         <!-- Mes formations -->
-        <div class="formations">
+        <div class="formations" id="formations">
             <h2>FORMATIONS</h2>
 
             <div class="formations_list">
@@ -221,7 +226,7 @@
         </div>
 
         <!-- Mes technologies -->
-        <div class="technologies">
+        <div class="technologies" id="technologies">
             <h2>TECHNOLOGIES</h2>
 
             <div class="technologies_div">
@@ -243,7 +248,7 @@
         </div>
         
         <!-- Mes expériences-->
-        <div class="xp">
+        <div class="xp" id="experiences">
             <h2>EXPERIENCES</h2>
             
             <div class="xp_list">
@@ -253,7 +258,7 @@
                     <p class="xp_list_title_btn">+</p>
                 </div>
 
-                <div class="xp_list_description">
+                <div class="xp_list_description toggle-element">
 
                     <div class="xp_list_description_contact">
                         <div class="xp_list_description_contact_adress">
@@ -282,10 +287,10 @@
                 <div class="xp_list_title">
                     <p>Responsable marketing @ ARSENAL</p>
                     <p>2022 - 2023</p>
-                    <p>+</p>
+                    <p class="xp_list_title_btn">+</p>
                 </div>
 
-                <div class="xp_list_description">
+                <div class="xp_list_description toggle-element">
 
                     <div class="xp_list_description_contact">
                         <div class="xp_list_description_contact_adress">
@@ -314,10 +319,10 @@
                 <div class="xp_list_title">
                     <p>Responsable marketing @ CHARLET</p>
                     <p>2019 - 2022</p>
-                    <p>+</p>
+                    <p class="xp_list_title_btn">+</p>
                 </div>
 
-                <div class="xp_list_description">
+                <div class="xp_list_description toggle-element">
 
                     <div class="xp_list_description_contact">
                         <div class="xp_list_description_contact_adress">
@@ -346,10 +351,10 @@
                 <div class="xp_list_title">
                     <p>Chef de projets événementiel @ IRFO</p>
                     <p>2017 - 2018</p>
-                    <p>+</p>
+                    <p class="xp_list_title_btn">+</p>
                 </div>
 
-                <div class="xp_list_description">
+                <div class="xp_list_description toggle-element">
 
                     <div class="xp_list_description_contact">
                         <div class="xp_list_description_contact_adress">
@@ -376,7 +381,7 @@
     </main>
 
     <!-- FOOTER -->
-    <footer class="footer">
+    <footer class="footer" id="contact">
         <h2>CONTACT</h2>
 
         <div class="footer_contact">
