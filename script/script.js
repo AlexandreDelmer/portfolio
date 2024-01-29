@@ -9,11 +9,5 @@ for(let i = 0; i <xpListTitleBtn.length; i++){
     xpListTitleBtn[i].addEventListener('click', ()=>{
         xpListDescription[i].classList.toggle('toggle-element')
         xpListTitle[i].classList.toggle('marginBottom')
-        xpListTitle[i].textContent === "+" ? xpListTitleBtn[i].textContent = "-" : xpListTitleBtn[i].textContent = "+";
-        xpListTitle[i].textContent === "+" ? xpListDescription[i].classList.toggle('displayBottom') : xpListDescription[i].classList.toggle('displayTop');
-        xpListDescription[i].addEventListener('animationend', ()=> {
-            xpListDescription[i].classList.remove('displayBottom')
-            xpListDescription[i].classList.remove('displayTop')
         })
-    })
 }
