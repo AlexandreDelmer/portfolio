@@ -9,5 +9,9 @@ for(let i = 0; i <xpListTitleBtn.length; i++){
     xpListTitleBtn[i].addEventListener('click', ()=>{
         xpListDescription[i].classList.toggle('toggle-element')
         xpListTitle[i].classList.toggle('marginBottom')
-        })
+
+        if(xpListTitleBtn[i] = "+"){
+            xpListDescription[i].classList.toggle('displayBottom')
+        }
+    })
 }
