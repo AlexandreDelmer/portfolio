@@ -24,15 +24,30 @@ function displaySelectMenuList (){
 
 displaySelectMenuList()
 
-// Affiche le menu lorsqu'on clic sur le menu mobile
+//ouvre le menu lorsqu'on clic sur le menu burger
 let menuToggle = document.querySelector('.menu_toggle')
 
 menuToggle.addEventListener('click', ()=>{
-    let navMobile = document.querySelector('.nav_mobile')
-    let body = document.body
     
+    //Affiche le menu Mobile
+    let navMobile = document.querySelector('.nav_mobile')
     navMobile.classList.toggle("toggle-element")
+
+    //Supprime la possibilité de scroll
+    let body = document.body
     body.classList.toggle("overflow-hidden")
+
+    //Retire l'affichage du backToTop
+    let backToTop = document.getElementById("backToTop")
+    backToTop.style.display = "none"
+
+    //Retire l'affiche du logo
+    let logoNav = document.querySelector('.logo')
+    logoNav.style.display ="none"
+
+    //Retire l'affiche du menu burger
+    let menuToggle = document.querySelector('.menu_toggle')
+    menuToggle.style.display ="none"
 })
 
 let navMobileMenu = document.querySelectorAll('.nav_mobile_menu a')
@@ -44,6 +59,19 @@ for(let i = 0; i < navMobileMenu.length; i++){
 
         navMobile.classList.toggle("toggle-element")
         body.classList.toggle("overflow-hidden")
+
+        //Affichage du backToTop
+        let backToTop = document.getElementById("backToTop")
+        backToTop.style.display = "flex"
+
+        //Affichage du logo
+        let logoNav = document.querySelector('.logo')
+        logoNav.style.display ="flex"
+
+        //Affichage du menu burger
+        let menuToggle = document.querySelector('.menu_toggle')
+        menuToggle.style.display ="flex"
+
     })
 }
 
