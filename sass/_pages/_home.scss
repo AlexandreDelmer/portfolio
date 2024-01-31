@@ -42,12 +42,15 @@ h2{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
     line-height: 2.5rem;
     padding: 2rem 2rem 2rem 2rem;
-    position: relative;
     margin-top: 1rem;
     margin-bottom: 2rem;
+
+    @include mobil-screen{
+        margin-top: 5rem;
+        align-items: center;
+    }
 
     &_p{
         color: $secondaryColor;
@@ -57,9 +60,20 @@ h2{
         display: flex;
         flex-direction: column;
         margin-bottom: 1rem;
+
+        @include mobil-screen{
+            text-align: center;
+        }
+
     }
+
     & button{
         align-self: flex-start;
+        margin-top: 0.5rem;
+
+        @include mobil-screen{
+            align-self: center;
+        }
 
         &:hover{
             color: $fifthColor;
@@ -69,6 +83,11 @@ h2{
             text-decoration: none;
             color: $primaryColor;
             font-size: $tertiaryFontSize;
+
+            @include mobil-screen{
+                display: flex;
+                justify-content: center;
+            }
 
             &:hover{
                 color: $fifthColor;
@@ -81,9 +100,14 @@ h2{
 .aboutme{
     display: flex;
     justify-content: space-evenly;
+    width: 80%;
     align-items: center;
     margin-bottom: 2rem;
     padding: 0rem 2rem 0rem 2rem;
+
+    @include mobil-screen{
+        justify-content: center;
+    }
 
     &_portrait{
         display: flex;
@@ -103,8 +127,8 @@ h2{
         &_frame{
             position: absolute;
             z-index: -1;
-            width: 450px;
-            height: 500px;
+            width: inherit;
+            height: inherit;
             border: 10px solid $seventhColor;
             border-radius: 10px;
             top: 25px;
@@ -172,10 +196,12 @@ h2{
 
     &_project{
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
         align-items: center;
         margin-top: 2rem;
         margin-bottom: 3rem;
+
 
         &_img{
             display: flex;
@@ -183,6 +209,7 @@ h2{
             align-items: center;
             position: relative;
             margin-left: 2rem;
+            max-width: 100%;
 
             & img{
                 position: relative;
@@ -190,7 +217,7 @@ h2{
                 height: auto;
             }
 
-            & div{
+            &_frame{
                 position: absolute;
                 z-index: -1;
                 width: 500px;
@@ -403,7 +430,6 @@ h2{
         max-width: 70%;
 
         &_title{
-            $xpWidthTitle: 1000px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -411,7 +437,7 @@ h2{
             border-radius: 15px;
             padding: 0rem 1rem 0rem 1rem;
             gap: 60px;
-            width: $xpWidthTitle;
+            width: 100%;
             height: auto;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
@@ -441,7 +467,7 @@ h2{
             border-radius: 0px 0px 15px 15px;
             padding: 1rem;
             margin-bottom: 2rem;
-            width: calc(1000px - 5%);
+            width: 95%;
             height: auto;
             position: relative;
             z-index: -1;
