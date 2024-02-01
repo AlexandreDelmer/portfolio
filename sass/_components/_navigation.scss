@@ -43,7 +43,7 @@ nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     padding: 0.5rem 2rem 0.5rem 2rem;
     box-sizing: border-box;
@@ -81,6 +81,7 @@ nav{
         height: 0.4rem;
         background-color: $primaryColor;
         border-radius: 10px;
+        border: 2px solid $fourthColor;
     }
     
     & .barTwo{
@@ -89,6 +90,7 @@ nav{
         height: 0.4rem;
         background-color: $primaryColor;
         border-radius: 10px;
+        border: 2px solid $fourthColor;
     }
     
     & .barThree{
@@ -97,6 +99,7 @@ nav{
         height: 0.4rem;
         background-color: $primaryColor;
         border-radius: 10px;
+        border: 2px solid $fourthColor;
     }
 
     &:hover .barOne{
@@ -177,7 +180,8 @@ nav{
 
         @include mobil-screen{
             align-items: center;
-            margin-top: 3rem;
+            justify-content: center;
+            margin: 4rem 0rem 1rem 0rem;
         }
 
         & a{
@@ -191,7 +195,8 @@ nav{
             text-decoration: none;
 
             @include mobil-screen{
-                margin: 2rem;
+                margin: 1rem ;
+                font-size: $fourthFontSize;
             }
     
             &:hover{
