@@ -179,8 +179,50 @@
     scale: 1;
   }
 }
-@-webkit-keyframes horizontalScroll {}
-@keyframes horizontalScroll {}
+@-webkit-keyframes fillBackground {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fillBackground {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes rebound {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  60% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+}
+@keyframes rebound {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+  }
+  60% {
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+}
 button {
   color: white;
   font-size: 1rem;
@@ -593,7 +635,18 @@ h2 {
   }
 }
 .intro_p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   color: #7D8296;
+}
+.intro_p--rebound {
+  -webkit-animation: rebound 1s ease-in-out infinite;
+          animation: rebound 1s ease-in-out infinite;
 }
 .intro h1 {
   display: -webkit-box;
@@ -793,16 +846,17 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+  overflow: hidden;
 }
 .portfolio::before {
   content: "";
   position: absolute;
-  z-index: -99;
+  z-index: -1;
   width: 200%;
   height: 100%;
   background: white;
-  -webkit-transform: rotate(3deg);
-          transform: rotate(3deg);
+  -webkit-transform: rotate(10deg);
+          transform: rotate(10deg);
 }
 .portfolio h2 {
   color: #0F162A;
@@ -811,11 +865,14 @@ h2 {
 .portfolio h2::before {
   content: "";
   width: 100%;
-  height: 100%;
+  height: 50%;
   position: absolute;
   z-index: -1;
   background: -webkit-gradient(linear, left top, right top, from(#56ADD5), to(#740CDC));
   background: linear-gradient(to right, #56ADD5, #740CDC);
+  -webkit-animation: fillBackground 2s ease-in-out infinite;
+          animation: fillBackground 2s ease-in-out infinite;
+  top: 50%;
 }
 .portfolio_menu {
   margin-bottom: 0;

@@ -53,7 +53,13 @@ h2{
     }
 
     &_p{
+        display: flex;
+        flex-direction: row;
         color: $secondaryColor;
+
+        &--rebound{
+            animation: rebound 1s ease-in-out infinite;
+        }
     }
 
     & h1{
@@ -96,6 +102,8 @@ h2{
         }
     }
 }
+
+
 
 .aboutme{
     display: flex;
@@ -216,15 +224,16 @@ h2{
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow: hidden;
 
     &::before{
         content: '';
         position: absolute;
-        z-index: -99;
+        z-index: -1;
         width: 200%;
         height: 100%;
         background: $primaryColor;
-        transform: rotate(3deg);
+        transform: rotate(10deg);
     }
 
     & h2{
@@ -234,10 +243,12 @@ h2{
         &::before{
             content:'';
             width: 100%;
-            height: 100%;
+            height: 50%;
             position: absolute;
             z-index: -1;
             background: linear-gradient(to right, #56ADD5,#740CDC);
+            animation: fillBackground 2s ease-in-out infinite;
+            top: 50%;
         }
     }
 

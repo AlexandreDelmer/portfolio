@@ -104,6 +104,24 @@ $sixthFontSize: 2.5rem;
     }
 }
 
-@keyframes horizontalScroll {
-    
+@keyframes fillBackground {
+    0%{
+        width: 0%;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes rebound {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10%);
+    }
+    60% {
+        transform: translateY(-5%);
+    }
 }
