@@ -846,7 +846,6 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  overflow: hidden;
 }
 .portfolio::before {
   content: "";
@@ -855,8 +854,8 @@ h2 {
   width: 200%;
   height: 100%;
   background: white;
-  -webkit-transform: rotate(10deg);
-          transform: rotate(10deg);
+  -webkit-transform: rotate(7deg);
+          transform: rotate(7deg);
 }
 .portfolio h2 {
   color: #0F162A;
