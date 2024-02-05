@@ -1,12 +1,17 @@
 <?php
+
+session_start();
+
+$message = ""; // Ajout de la variable pour stocker le message
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Récupérer les valeurs du formulaire
     $name = $_POST["name"];
     $email = $_POST["email"];
-    $message = $_POST["message"];
+    $messageText = $_POST["message"];
 
     // Adresse email de destination
-    $to = "alexandredelmer.com";
+    $to = "contact@alexandredelmer.com";
 
     // Sujet de l'email
     $subject = "Nouveau message de $name";
@@ -14,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Corps de l'email
     $body = "Nom: $name\n";
     $body .= "Email: $email\n\n";
-    $body .= "Message:\n$message";
+    $body .= "Message:\n$messageText";
 
     // En-têtes de l'email
     $headers = "From: $email";
@@ -24,9 +29,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Vérifier si l'email a été envoyé avec succès
     if ($success) {
-        echo "L'email a été envoyé avec succès.";
+        $message = "L'email a été envoyé avec succès.";
     } else {
-        echo "Erreur lors de l'envoi de l'email. Veuillez réessayer.";
+        $message = "Erreur lors de l'envoi de l'email. Veuillez réessayer.";
     }
+
+    $_SESSION['message'] = $message;
 }
 ?>

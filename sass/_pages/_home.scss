@@ -1,11 +1,14 @@
 :root {
     font-size: 24px;
 
+    @include tablet-screen{
+        font-size: 24px;
+    }
+
     @include mobil-screen{
         font-size: 16px;
     }
 }
-
 
 body{
     display: flex;
@@ -52,10 +55,23 @@ h2{
         align-items: center;
     }
 
+    @include tablet-screen{
+        margin-top: 3rem;
+        align-items: center;
+    }
+
     &_p{
         display: flex;
         flex-direction: row;
         color: $secondaryColor;
+
+        @include mobil-screen{
+            justify-content: center;
+        }
+
+        @include tablet-screen{
+            justify-content: center;
+        }
 
         &--rebound{
             animation: rebound 1s ease-in-out infinite;
@@ -71,6 +87,10 @@ h2{
             text-align: center;
         }
 
+        @include tablet-screen{
+            text-align: center;
+        }
+
     }
 
     & button{
@@ -78,6 +98,10 @@ h2{
         margin-top: 0.5rem;
 
         @include mobil-screen{
+            align-self: center;
+        }
+
+        @include tablet-screen{
             align-self: center;
         }
 
@@ -117,12 +141,21 @@ h2{
         justify-content: center;
     }
 
+    @include tablet-screen{
+        flex-direction: column;
+        justify-content: center;
+    }
+
     &_portrait{
         display: flex;
         position: relative;
         max-width: 100%;
         height: auto;
         margin-bottom: 2rem;
+
+        @include tablet-screen{
+            justify-content: center;
+        }
 
         &_img{ 
             max-width: 100%;
@@ -132,6 +165,11 @@ h2{
             margin-right: 2rem;
 
             @include mobil-screen{
+                margin-right: 0rem;
+            }
+
+            @include tablet-screen{
+                max-width: 90%;
                 margin-right: 0rem;
             }
         }
@@ -154,6 +192,15 @@ h2{
                 bottom: 0;
                 left: 1%;
             }
+
+            @include tablet-screen{
+                width: 90%;
+                height: 90%;
+                top: 13%;
+                right: 0;
+                bottom: 0;
+                left: 8%;
+            }
         }
     }
 
@@ -161,6 +208,13 @@ h2{
         margin-left: 3rem;
 
         @include mobil-screen{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 0rem;
+        }
+
+        @include tablet-screen{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -176,6 +230,11 @@ h2{
                     text-align: center;
                     margin-top: 2rem;
                 }
+
+                @include tablet-screen{
+                    text-align: center;
+                    margin-top: 2rem;
+                }
             }
 
             & p{
@@ -184,6 +243,10 @@ h2{
                 color: $secondaryColor;
 
                 @include mobil-screen{
+                    text-align: center;
+                }
+
+                @include tablet-screen{
                     text-align: center;
                 }
 
@@ -198,7 +261,11 @@ h2{
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            margin-top: 1rem;
+            margin: 1rem 0rem 1rem 0rem;
+
+            @include tablet-screen{
+                justify-content: center;
+            }
             
             & button{
                 margin: 0rem 1rem 0rem 1rem;
@@ -225,20 +292,10 @@ h2{
     align-items: center;
     position: relative;
 
-    &::before{
-        content: '';
-        position: absolute;
-        z-index: -1;
-        width: 200%;
-        height: 100%;
-        background: $primaryColor;
-        transform: rotate(7deg);
-
-    }
-
     & h2{
-        color: $fifthColor;
+        color: $primaryColor;
         position: relative;
+        margin: 1rem 0rem 1rem 0rem;
 
         &::before{
             content:'';
@@ -263,6 +320,12 @@ h2{
 
         @include mobil-screen{
             flex-direction: column;
+            align-items: center;
+        }
+
+        @include tablet-screen{
+            flex-direction: column;
+            align-items: center;
         }
 
         & img{
@@ -290,8 +353,12 @@ h2{
                 align-items: center;
             }
 
-            & h2{
-                color: $fifthColor;
+            @include tablet-screen{
+                align-items: center;
+            }
+
+            & h3{
+                color: $primaryColor;
                 margin: 0;
             }
 
@@ -299,6 +366,10 @@ h2{
                 color: $secondaryColor;
 
                 @include mobil-screen{
+                    text-align: center;
+                }
+
+                @include tablet-screen{
                     text-align: center;
                 }
             }
@@ -319,6 +390,10 @@ h2{
                     animation: bounce 1.5s ease-in-out infinite;
                     margin-top: 0.5rem;
 
+                    @include tablet-screen{
+                        margin-bottom: 2rem;
+                    }
+
                     &:hover{
                         color: $fifthColor;
                         background-color: $primaryColor;
@@ -327,12 +402,17 @@ h2{
             }
         }
 
-        &_img{
-            height: 100%;
 
-            & img{
-                width: auto;
-                max-height: 500px ;
+        & img{
+            max-width: 50%;
+            height: auto;
+
+            @include mobil-screen{
+                max-width: 90%;
+            }
+
+            @include tablet-screen{
+                max-width: 90%;
             }
         }
     }
@@ -502,37 +582,63 @@ h2{
         justify-content: center;
         align-items: center;
         color: $primaryColor;
-        max-width: 100%;
+        width: 80%;
 
         &_title{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            display: grid;
+            grid-template-columns: 5fr 2fr 1fr;
             background: linear-gradient(to right, #56ADD5, #740CDC);
             border-radius: 15px;
             padding: 0rem 1rem 0rem 1rem;
             gap: 60px;
-            max-width: 100%;
+            width: 80%;
             height: auto;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 
             @include mobil-screen{
-                flex-direction: column;
-                justify-content: center;
-                gap: 0px;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 0;
+                padding: 1rem 1rem 1rem 1rem;
+            }
+
+            @include tablet-screen{
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr;
+                gap: 0;
+                padding: 1rem 1rem 1rem 1rem;
             }
 
             & p{
-
+                text-align: left;
+                
                 @include mobil-screen{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     text-align: center;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1.5;
+                }
+
+                @include tablet-screen{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1.5;
                 }
             }
-
+            
             &_btn{
                 display: flex;
+                justify-content: center;
+                align-items: center;
                 font-size: $fifthFontSize;
-                text-align: center;
+                text-align: right;
                 margin: 0;
                 padding: 0;
                 transition: transform 0.5s ease-in-out;
@@ -555,7 +661,7 @@ h2{
             border-radius: 0px 0px 15px 15px;
             padding: 1rem;
             margin-bottom: 2rem;
-            width: 90%;
+            width: 70%;
             height: auto;
             position: relative;
             z-index: -1;
@@ -564,6 +670,11 @@ h2{
                 margin-bottom: 1rem;
 
                 @include mobil-screen{
+                    margin-top: 1rem;
+                    text-align: center;
+                }
+
+                @include tablet-screen{
                     margin-top: 1rem;
                     text-align: center;
                 }
@@ -577,6 +688,12 @@ h2{
                 gap: 70px;
 
                 @include mobil-screen{
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0px;
+                }
+
+                @include tablet-screen{
                     flex-direction: column;
                     align-items: center;
                     gap: 0px;
@@ -625,6 +742,11 @@ h2{
                         width: 100%;
                         margin: 0rem 0rem 0.5rem 0rem;
                     }
+
+                    @include tablet-screen{
+                        width: 100%;
+                        margin: 0rem 0rem 0.5rem 0rem;
+                    }
                 }
             }
         }
@@ -642,6 +764,10 @@ h2{
     padding-bottom: 1rem;
 
     @include mobil-screen{
+        border-radius: 0;
+    }
+
+    @include tablet-screen{
         border-radius: 0;
     }
 
@@ -663,6 +789,11 @@ h2{
             padding: 0rem;
         }
 
+        @include tablet-screen{
+            flex-direction: column;
+            padding: 0rem;
+        }
+
         &_informations{
             display: flex;
             flex-direction: column;
@@ -670,6 +801,10 @@ h2{
             width: 50%;
 
             @include mobil-screen{
+                width: 90%;
+            }
+
+            @include tablet-screen {
                 width: 90%;
             }
 
@@ -681,10 +816,21 @@ h2{
                     text-align: center;
                     font-size: $fourthFontSize;
                 }
+
+                @include tablet-screen{
+                    text-align: center;
+                    font-size: $fourthFontSize;
+                }
             }
 
             & p{
                 @include mobil-screen{
+                    font-size: $secondaryFontSize;
+                    text-align: center;
+                    margin: 0rem 0rem 1rem 0rem;
+                }
+
+                @include tablet-screen{
                     font-size: $secondaryFontSize;
                     text-align: center;
                     margin: 0rem 0rem 1rem 0rem;
@@ -708,12 +854,20 @@ h2{
                     flex-direction: column;
                 }
 
+                @include tablet-screen{
+                    flex-direction: column;
+                }
+
                 & img{
                     max-width: 50px;
                     height: auto;
                     margin-right: 1rem;
 
                     @include mobil-screen{
+                        margin: 0rem 0rem 1rem 0rem;
+                    }
+
+                    @include tablet-screen{
                         margin: 0rem 0rem 1rem 0rem;
                     }
                 }
@@ -725,6 +879,10 @@ h2{
                     @include mobil-screen{
                         font-size: $secondaryFontSize;
                     }
+
+                    @include tablet-screen{
+                        font-size: $secondaryFontSize;
+                    }
                 }
             }
         }
@@ -733,11 +891,17 @@ h2{
             display: flex;
             flex-direction: column;
             padding: 1rem;
-            width: 50%;
+            width: 40%;
             border-radius: 15px;
             background: linear-gradient(to top left, #740CDC, #56ADD5);
 
             @include mobil-screen{
+                width: 80%;
+                align-items: center;
+                margin-top: 1rem;
+            }
+
+            @include tablet-screen{
                 width: 80%;
                 align-items: center;
                 margin-top: 1rem;
@@ -753,6 +917,10 @@ h2{
                 color: $primaryColor;
 
                 @include mobil-screen{
+                    width: 100%;
+                }
+
+                @include tablet-screen{
                     width: 100%;
                 }
 
@@ -773,7 +941,10 @@ h2{
 
                 @include mobil-screen{
                     width: 100%;
+                }
 
+                @include tablet-screen{
+                    width: 100%;
                 }
 
                 & ::placeholder{
@@ -787,6 +958,19 @@ h2{
                 font-weight: bold;
                 width: 150px;
 
+            }
+
+            &_ml{
+                color: $primaryColor;
+                font-size: 0.7rem;
+
+                @include mobil-screen{
+                    text-align: center;
+                }
+
+                @include tablet-screen{
+                    text-align: center;
+                }
             }
         }
     }
@@ -806,9 +990,6 @@ h2{
         align-items: center;
         color: $primaryColor;
         font-size: 20px;
-
-        @include mobil-screen{
-        }
 
         & p{
             @include mobil-screen{
