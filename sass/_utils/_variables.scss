@@ -108,9 +108,18 @@ $sixthFontSize: 2.5rem;
     0%{
         width: 0%;
     }
-
-    100%{
+    25%{
         width: 100%;
+    }
+    50%{
+        width: 0%;
+        right: 0%;
+    }
+    75%{
+        width: 100%;
+    }
+    100%{
+        width: 0%;
     }
 }
 
@@ -125,3 +134,16 @@ $sixthFontSize: 2.5rem;
         transform: translateY(-5%);
     }
 }
+
+@keyframes scrollRotate {
+    0% {
+        transform: translateX(0%);
+    }
+    50% {
+        transform: translateX(10%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+

@@ -10,6 +10,10 @@
     }
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body{
     display: flex;
     flex-direction: column;
@@ -18,6 +22,8 @@ body{
     line-height: 1;
     margin: 0;
     padding: 0;
+    position: relative;
+    overflow-x: hidden;
 }
 
 h1, h2, h3{
@@ -291,21 +297,40 @@ h2{
     justify-content: center;
     align-items: center;
     position: relative;
+    overflow-x: hidden;
+    padding: 1rem 0rem 2rem 0rem;
+    background: $primaryColor;
+    z-index: 0;
+
+
+    &::after{
+        content: 'PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO PORTFOLIO';
+        position: absolute;
+        background: $fifthColor;
+        font-size: $fifthFontSize;
+        color: $primaryColor;
+        top: 90%;
+        width: cover;
+        white-space: nowrap;
+        animation: scrollRotate 4s linear infinite;
+        padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+    }
 
     & h2{
-        color: $primaryColor;
+        color: $fifthColor;
         position: relative;
         margin: 1rem 0rem 1rem 0rem;
 
         &::before{
             content:'';
             width: 100%;
-            height: 50%;
+            height: 70%;
             position: absolute;
             z-index: -1;
             background: linear-gradient(to right, #56ADD5,#740CDC);
-            animation: fillBackground 2s ease-in-out infinite;
-            top: 50%;
+            animation: fillBackground 6s ease-in-out infinite;
+            top: 30%;
+            border-radius: 5px;
         }
     }
 
@@ -358,7 +383,7 @@ h2{
             }
 
             & h3{
-                color: $primaryColor;
+                color: $fifthColor;
                 margin: 0;
             }
 
@@ -386,7 +411,7 @@ h2{
                 & a{
                     text-decoration: none;
                     font-size: $secondaryFontSize;
-                    color: $primaryColor;
+                    color: $fifthColor;
                     animation: bounce 1.5s ease-in-out infinite;
                     margin-top: 0.5rem;
 
@@ -395,8 +420,8 @@ h2{
                     }
 
                     &:hover{
-                        color: $fifthColor;
-                        background-color: $primaryColor;
+                        color: $primaryColor;
+                        background-color: $fifthColor;
                     }
                 }
             }

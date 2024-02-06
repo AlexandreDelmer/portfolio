@@ -95,7 +95,12 @@ document.addEventListener("DOMContentLoaded", ()=> {
 
     //Function pour remonter le scoll à 0 au click sur le btn
     backToTop.addEventListener("click", ()=>{
-        document.body.scrollTop = 0
-        document.documentElement.scrollTop = 0
+        scrollToTop()
     })
 })
+
+function scrollToTop(){
+    window.scrollTo({
+        top: 0,
+    })
+}
