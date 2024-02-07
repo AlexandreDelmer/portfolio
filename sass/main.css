@@ -416,9 +416,11 @@ nav {
           align-items: center;
   width: 100%;
   height: auto;
-  padding: 0.5rem 2rem 0.5rem 2rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  top: 0;
+  left: 0;
 }
 @media only screen and (min-width: 1451px) {
   nav {
@@ -467,7 +469,7 @@ nav .menu a span {
   height: 0.4rem;
   background-color: white;
   border-radius: 10px;
-  border: 3px solid #4E119C;
+  border: 3px solid #0F162A;
 }
 .menu_toggle .barTwo {
   margin: 0.1rem;
@@ -475,7 +477,7 @@ nav .menu a span {
   height: 0.4rem;
   background-color: white;
   border-radius: 10px;
-  border: 3px solid #4E119C;
+  border: 3px solid #0F162A;
 }
 .menu_toggle .barThree {
   margin: 0.1rem;
@@ -483,7 +485,7 @@ nav .menu a span {
   height: 0.4rem;
   background-color: white;
   border-radius: 10px;
-  border: 3px solid #4E119C;
+  border: 3px solid #0F162A;
 }
 .menu_toggle:hover .barOne {
   -webkit-transform: translateY(-0.3rem);
@@ -648,7 +650,7 @@ body {
   font-family: "quantico", sans-serif;
   line-height: 1;
   margin: 0;
-  padding: 0;
+  padding: 1rem 4rem 0rem 4rem;
   position: relative;
   overflow-x: hidden;
 }
@@ -678,13 +680,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   line-height: 2.5rem;
   padding: 2rem 2rem 2rem 2rem;
   margin-top: 1rem;
@@ -706,7 +707,24 @@ h2 {
             align-items: center;
   }
 }
-.intro_p {
+.intro img {
+  max-width: 50%;
+  height: 100%;
+}
+.intro__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-right: 2rem;
+}
+.intro__description__p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -715,26 +733,27 @@ h2 {
       -ms-flex-direction: row;
           flex-direction: row;
   color: #7D8296;
+  font-size: 1rem;
 }
 @media only screen and (max-width: 767px) {
-  .intro_p {
+  .intro__description__p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .intro_p {
+  .intro__description__p {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
 }
-.intro_p--rebound {
+.intro__description__p--rebound {
   -webkit-animation: rebound 1s ease-in-out infinite;
           animation: rebound 1s ease-in-out infinite;
 }
-.intro h1 {
+.intro__description h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -745,42 +764,42 @@ h2 {
   margin-bottom: 1rem;
 }
 @media only screen and (max-width: 767px) {
-  .intro h1 {
+  .intro__description h1 {
     text-align: center;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .intro h1 {
+  .intro__description h1 {
     text-align: center;
   }
 }
-.intro button {
+.intro__description button {
   -ms-flex-item-align: start;
       align-self: flex-start;
   margin-top: 0.5rem;
 }
 @media only screen and (max-width: 767px) {
-  .intro button {
+  .intro__description button {
     -ms-flex-item-align: center;
         align-self: center;
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .intro button {
+  .intro__description button {
     -ms-flex-item-align: center;
         align-self: center;
   }
 }
-.intro button:hover {
+.intro__description button:hover {
   color: #0F162A;
 }
-.intro button a {
+.intro__description button a {
   text-decoration: none;
   color: white;
   font-size: 1.5rem;
 }
 @media only screen and (max-width: 767px) {
-  .intro button a {
+  .intro__description button a {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -789,7 +808,7 @@ h2 {
             justify-content: center;
   }
 }
-.intro button a:hover {
+.intro__description button a:hover {
   color: #0F162A;
 }
 

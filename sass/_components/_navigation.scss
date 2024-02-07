@@ -45,8 +45,10 @@ nav{
     align-items: center;
     width: 100%;
     height: auto;
-    padding: 0.5rem 2rem 0.5rem 2rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
     box-sizing: border-box;
+    top: 0;
+    left: 0;
 
     @include large-desktop-screen{
         background: $fifthColor;
@@ -85,7 +87,7 @@ nav{
         height: 0.4rem;
         background-color: $primaryColor;
         border-radius: 10px;
-        border: 3px solid $fourthColor;
+        border: 3px solid $fifthColor;
     }
     
     & .barTwo{
@@ -94,7 +96,7 @@ nav{
         height: 0.4rem;
         background-color: $primaryColor;
         border-radius: 10px;
-        border: 3px solid $fourthColor;
+        border: 3px solid $fifthColor;
     }
     
     & .barThree{
@@ -103,7 +105,7 @@ nav{
         height: 0.4rem;
         background-color: $primaryColor;
         border-radius: 10px;
-        border: 3px solid $fourthColor;
+        border: 3px solid $fifthColor;
     }
 
     &:hover .barOne{

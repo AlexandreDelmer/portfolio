@@ -21,7 +21,7 @@ body{
     font-family: "quantico", sans-serif;
     line-height: 1;
     margin: 0;
-    padding: 0;
+    padding: 1rem 4rem 0rem 4rem;
     position: relative;
     overflow-x: hidden;
 }
@@ -49,8 +49,8 @@ h2{
 
 .intro{
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: center;
     line-height: 2.5rem;
     padding: 2rem 2rem 2rem 2rem;
     margin-top: 1rem;
@@ -66,69 +66,81 @@ h2{
         align-items: center;
     }
 
-    &_p{
-        display: flex;
-        flex-direction: row;
-        color: $secondaryColor;
+    & img{
+        max-width: 50%;
+        height: 100%;
 
-        @include mobil-screen{
-            justify-content: center;
-        }
-
-        @include tablet-screen{
-            justify-content: center;
-        }
-
-        &--rebound{
-            animation: rebound 1s ease-in-out infinite;
-        }
     }
 
-    & h1{
+    &__description{
         display: flex;
         flex-direction: column;
-        margin-bottom: 1rem;
+        align-items: flex-start;
+        margin-right: 2rem;
 
-        @include mobil-screen{
-            text-align: center;
-        }
-
-        @include tablet-screen{
-            text-align: center;
-        }
-
-    }
-
-    & button{
-        align-self: flex-start;
-        margin-top: 0.5rem;
-
-        @include mobil-screen{
-            align-self: center;
-        }
-
-        @include tablet-screen{
-            align-self: center;
-        }
-
-        &:hover{
-            color: $fifthColor;
-        }
-
-        & a{
-            text-decoration: none;
-            color: $primaryColor;
-            font-size: $tertiaryFontSize;
-
+        &__p{
+            display: flex;
+            flex-direction: row;
+            color: $secondaryColor;
+            font-size: $primaryFontSize;
+    
             @include mobil-screen{
-                display: flex;
                 justify-content: center;
             }
+    
+            @include tablet-screen{
+                justify-content: center;
+            }
+    
+            &--rebound{
+                animation: rebound 1s ease-in-out infinite;
+            }
+        }
 
+        & h1{
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1rem;
+    
+            @include mobil-screen{
+                text-align: center;
+            }
+    
+            @include tablet-screen{
+                text-align: center;
+            }
+        }
+
+        & button{
+            align-self: flex-start;
+            margin-top: 0.5rem;
+    
+            @include mobil-screen{
+                align-self: center;
+            }
+    
+            @include tablet-screen{
+                align-self: center;
+            }
+    
             &:hover{
                 color: $fifthColor;
             }
-
+    
+            & a{
+                text-decoration: none;
+                color: $primaryColor;
+                font-size: $tertiaryFontSize;
+    
+                @include mobil-screen{
+                    display: flex;
+                    justify-content: center;
+                }
+    
+                &:hover{
+                    color: $fifthColor;
+                }
+            }
         }
     }
 }
