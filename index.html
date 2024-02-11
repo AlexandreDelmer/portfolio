@@ -15,6 +15,8 @@
     <script src="script/main.js" defer></script>
     <script src="script/nav.js" defer></script>
     <script src="script/form.js" defer></script>
+    <script src="script/stickers.js" defer></script>
+
 </head>
 
 <body>
@@ -69,36 +71,19 @@
         <!-- L'introduction de mon site  -->
         <div class="intro">
             <div class="intro__description">
-                <p>Créez votre site entièrement personnalisé</p>
-                <h1>ALEXANDRE DELMER</h1>
-            
-                <button class="btnOne btnRotateBottom"><a href="#portfolio">Mes projets</a></button>
-            </div>
-
-            <img src="/src/intro--img.png" alt="">
-        </div>
-
-        <!-- A propos de moi -->
-        <div class="aboutme">
-
-            <div class="aboutme_portrait">
-                <img class="aboutme_portrait_img" src="/src/profilPhoto.jpg" alt="Photo de profil de Alexandre Delmer">
-                <div class="aboutme_portrait_frame"></div>
-            </div>
-
-            <div class="aboutme_description">            
-                <div class="aboutme_description_intro">
-                    <h2>A propos de moi</h2>
-                    <p>Après avoir effectué mes études en web marketing et travaillé durant de nombreuses années en tant que responsable marketing, j’ai décidé d’opérer une reconversion pour devenir web devéloppeur frontend (javaScript). Pour cela, j’entame une formation en alternance sur 12 mois avec Openclassrooms (4 jours en entreprise puis 1 jour en formation). <span>Je suis à la recherche d’une entreprise pour commencer mon nouveau contrat à partir du 19 avril 2024.</span></p>
-                </div>
+                <h3>Créez votre site entièrement personnalisé</h3>
+                <h1><span>ALEXANDRE DELMER</span></h1>
+                <h1>DEVELOPPEUR WEB</h1>
+                <p>Transformez vos projets en opportunités en ligne grâce à votre site web sur mesure. Ensemble, nous vous créons une présence digitale qui génère des leads, qui renforce votre notoriété et qui augmente votre visibilité.</p>
                 
-                <div class="aboutme_description_areaBtn">
-                    <button class="btnOne btnRotateTop"><a href="#contact">CONTACTEZ MOI</a></button>
-                    <button class="btnOne btnRotateBottom"><a href="/src/CV_DELMER_Alexandre_WebDeveloppeur.pdf" download="CV_DELMER_Alexandre_WebDevelopper">CV</a></button>
+                <div class="intro__button">
+                    <button class="btnOne"><a href="#contact">CONTACTEZ MOI</a></button>
+                    <button class="btnOne"><a href="/src/CV_DELMER_Alexandre_WebDeveloppeur.pdf" download="">TELECHARGEZ MON CV</a></button>
                 </div>
             </div>
-        </div>
 
+            <div class="intro__img"><img src="/src/intro--img.png" alt=""></div>
+        </div>
                 
         <!-- Mon portfolio, à mettre en commentaire si je n'ai pas de projet à montrer -->
         <div class="portfolio" id="portfolio">
@@ -109,21 +94,19 @@
                 <!-- <button class="btnThree">Projets</button> -->
             </div>
 
-            <div class="portfolio_project">
-
-                <div class="portfolio_project_description">
-                    <h3>AZERTYPE</h3>
-                    <p class="portfolio_project_description_p">AZERTYPE est un projet de cours Openclassrooms visant à s'exercer sur la technologie Javascript. L'objectif principal de cet exercice était de manipuler le DOM pour faire un jeu simple dans lequel le joueur doit recopier une liste de mot pour augmenter son score.</p>
-                
-                    <div class="portfolio_project_description_link">
-                        <a href="/wordsGame/index.html" target="_blank">Découvrez le projet</a>
-                    </div>
+            <div class="portfolio__stickers">
+                <div class="portfolio__stickers__projects">
+                    <h3>JEUX DE MOTS</h3>
+                    <p>Un projet permettant de manipuler le DOM grâce au language JavaScript. (destkop first)</p>
+                    <a href="/wordsGame/index.html" target="_blank"><button class="btnOne">Découvrir</button></a>    
                 </div>
-
-                <img src="/src/azertype.png" alt="projet de jeux AZERTYPE">
             </div>
 
-            <!-- <button class="btnOne">Voir plus</button> -->
+            <!-- Sliders pour faire défiler les projet
+            <div class="portfolio__sliders">
+                <div class="portfolio__sliders__dot"></div>
+            </div>
+            -->
         </div>
 
         <!-- Mes formations -->

@@ -142,7 +142,7 @@ nav{
     height: 100%;
     background: $fifthColor;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
     position: fixed;
     z-index: 1;
 
@@ -173,6 +173,9 @@ nav{
                 max-width: 80px;
                 height: auto;
                 margin: 0rem 0.5rem 0rem 00.5rem;
+
+                @include mobil-screen{
+                }
             }
         }    
     }
@@ -185,6 +188,12 @@ nav{
         margin-top: 0.2rem;
 
         @include mobil-screen{
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0rem 1rem 0rem;
+        }
+
+        @include tablet-screen{
             align-items: center;
             justify-content: center;
             margin: 4rem 0rem 1rem 0rem;
@@ -203,6 +212,10 @@ nav{
             @include mobil-screen{
                 margin: 1rem ;
                 font-size: $fourthFontSize;
+            }
+
+            @include tablet-screen{
+                font-size: 3.5rem;
             }
     
             &:hover{

@@ -47,9 +47,14 @@ menuToggle.addEventListener('click', ()=>{
 
     //Retire l'affiche du menu burger
     let menuToggle = document.querySelector('.menu_toggle')
-    menuToggle.style.display ="none"
+    menuToggle.style.display = "none"
+
+    //Supprimer le padding du body
+    document.body.style.padding = "0px"
 })
 
+
+//Action au click sur l'un des a du menu mobil
 let navMobileMenu = document.querySelectorAll('.nav_mobile_menu a')
 
 for(let i = 0; i < navMobileMenu.length; i++){
@@ -71,6 +76,9 @@ for(let i = 0; i < navMobileMenu.length; i++){
         //Affichage du menu burger
         let menuToggle = document.querySelector('.menu_toggle')
         menuToggle.style.display ="flex"
+
+        //Afficher la padding du body
+        document.body.style.padding = "1rem 4.5rem 0rem 4.5rem"
 
     })
 }
