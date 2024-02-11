@@ -258,11 +258,13 @@ h2{
     @include mobil-screen{
         width: 100%;
         left: 0;
+        box-sizing: content-box;
     }
 
     @include tablet-screen{
         width: 100%;
         left: 0;
+        box-sizing: content-box;
     }
 
     &::after{
